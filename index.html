@@ -1,0 +1,970 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image" href="./assets/favico.jpg" />
+    <title>Binita Khadka</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <header
+      class="hero-parallax-bg flex items-center justify-center overflow-hidden relative"
+    >
+      <!-- <div class="hero-overlay"></div> -->
+
+      <!-- NAV  -->
+      <nav
+        id="heroNav"
+        class="fixed top-0 left-0 w-full z-50 transition-all duration-300"
+      >
+        <div
+          id="navInner"
+          class="mx-auto max-w-7xl px-6 py-5 flex items-center justify-between"
+        >
+          <!-- "Logo" text -->
+          <a href="#top" class="font-semibold text-2xl" id="navBrand"> Binita Khadka </a>
+
+          <!-- Hamburger-->
+          <button
+            id="menuBtn"
+            class="group inline-flex items-center justify-center rounded-xl focus:outline-none focus:ring-2 focus:ring-white/50"
+            aria-label="Open menu"
+            aria-expanded="false"
+          >
+            <span id="burger" class="burger">
+              <span class="line"></span>
+              <span class="line"></span>
+              <span class="line"></span>
+            </span>
+          </button>
+        </div>
+      </nav>
+
+      <div id="menuOverlay" class="fixed inset-0 bg-black/50 z-50 hidden"></div>
+
+      <!-- Off-canvas Menu -->
+      <aside
+        id="sideMenu"
+        class="fixed top-0 right-0 h-full w-full md:w-[25%] bg-white z-[60] translate-x-full transition-transform duration-300 shadow-2xl flex flex-col justify-between"
+        aria-hidden="true"
+      >
+        <div>
+          <div
+            class="p-6 flex items-center justify-between border-b border-black/10"
+          >
+            <a href="#top" class="title text-xl"> Binita Khadka </a>
+
+            <button
+              id="closeBtn"
+              class="rounded-full px-4 py-2 hover:bg-black/5 focus:outline-none focus:ring-2 focus:ring-black/20"
+              aria-label="Close menu"
+            >
+              <i class="fa-solid fa-x text-sm"></i>
+            </button>
+          </div>
+
+          <div class="p-6 space-y-8">
+            <ul class="space-y-6">
+              <li>
+                <a
+                  class="block text-black/80 hover:text-black font-medium text-xl"
+                  href="#about"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  class="block text-black/80 hover:text-black font-medium text-xl"
+                  href="#news"
+                  >News</a
+                >
+              </li>
+              <li>
+                <a
+                  class="block text-black/80 hover:text-black font-medium text-xl"
+                  href="#gallery"
+                  >Gallery</a
+                >
+              </li>
+              <li>
+                <a
+                  class="block text-black/80 hover:text-black font-medium text-xl"
+                  href="#blog"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a
+                  class="block text-black/80 hover:text-black font-medium text-xl"
+                  href="#contact"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+
+            <div class="flex justify-center">
+              <a href="#contact" class="btn w-full text-center">
+                Join The Movement
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 bg-black/5">
+          <div class="flex justify-center space-x-3">
+            <a
+              href="https://www.facebook.com/binita.khadka.718689"
+              target="_blank"
+              class="text-black/80 hover:text-black border border-black/50 rounded-full p-4 flex items-center justify-center"
+              aria-label="Facebook"
+            >
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a
+              href=""
+              target="_blank"
+              class="text-black/80 hover:text-black border border-black/50 rounded-full p-3 flex items-center justify-center"
+              aria-label="Instagram"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a
+              href=""
+              target="_blank"
+              class="text-black/80 hover:text-black border border-black/50 rounded-full p-3 flex items-center justify-center"
+              aria-label="twitter"
+            >
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a
+              href=""
+              target="_blank"
+              class="text-black/80 hover:text-black border border-black/50 rounded-full p-3 flex items-center justify-center"
+              aria-label="threads"
+            >
+              <i class="fa-brands fa-threads"></i>
+            </a>
+            <a
+              href="https://www.tiktok.com/@binitakhadka77"
+              target="_blank"
+              class="text-black/80 hover:text-black border border-black/50 rounded-full p-3 flex items-center justify-center"
+              aria-label="TikTok"
+            >
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+          </div>
+          <div class="p-3">
+            <p class="text-black/60 text-sm text-center">
+              © <span id="year"></span> Binita Khadka. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </aside>
+
+      <!-- hero CONTENT -->
+      <div class="relative z-10 text-center px-6 max-w-4xl space-y-6">
+        <span
+          class="reveal reveal-down delay-sm block sub-heading text-[var(--accent)]"
+        >
+          Leadership for 2026
+        </span>
+
+        <h1
+          class="reveal reveal-up delay-lg heading text-[var(--primary)] uppercase tracking-wider"
+        >
+          Binita Khadka
+        </h1>
+
+        <p
+          class="font-[Montserrat] font-medium text-[#F8F9FA] text-lg md:text-2xl mb-10 max-w-2xl mx-auto leading-[30px] opacity-90"
+        >
+          A vision built on integrity, community progress, and a sustainable
+          future for all.
+        </p>
+
+        <div class="reveal reveal-left delay-md">
+          <a href="#contact" class="btn"> Join The Movement </a>
+        </div>
+      </div>
+
+      <!-- Scroll Down Indicator -->
+      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20">
+        <a href="#about" class="flex flex-col items-center gap-2 group">
+          <span
+            class="text-white text-xs tracking-widest uppercase opacity-80 group-hover:opacity-100 transition"
+          >
+            Scroll down
+          </span>
+
+          <div class="mouse">
+            <div class="wheel"></div>
+          </div>
+        </a>
+      </div>
+    </header>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="scroll-mt-20 relative z-20 bg-[#F8F9FA]">
+      <div class="max-w-7xl mx-auto px-4 md:px-6 py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <!-- LEFT TEXT -->
+          <div class="reveal reveal-left lg:col-span-6 space-y-4">
+            <h2 class="title ">About Binita</h2>
+
+            <p>
+              Binita Khadka represents a modern, accountable, and people-focused
+              leadership model built on transparency and measurable progress.
+            </p>
+
+            <p>
+              Her approach centers on listening first, engaging directly with
+              communities, and implementing solutions that improve everyday life
+              — strengthening institutions, expanding opportunities for youth,
+              and ensuring long-term sustainability.
+            </p>
+
+            <p>
+              This portfolio reflects her mission for 2026: to build trust,
+              empower communities, and deliver practical, transparent
+              governance.
+            </p>
+          </div>
+
+          <!-- RIGHT IMAGE -->
+          <div class="reveal reveal-down lg:col-span-6">
+            <div class="relative rounded-md overflow-hidden shadow">
+              <img
+                src="./assets/about-img.jpg"
+                alt="Binita Khadka"
+                class="w-full h-[500px] object-cover"
+              />
+
+              <div
+                class="absolute inset-0 bg-gradient-to-b from-black/20 to-black/80"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- news section -->
+    <section id="news" class="bg-[var(--secondary)] py-12">
+      <div class="px-4 md:px-6 max-w-7xl mx-auto space-y-6">
+        <!-- Title -->
+        <div class="text-center space-y-2">
+          <h2 class="title text-white">News</h2>
+          <p class="text-white/80 max-w-2xl mx-auto">
+            Latest updates, announcements, and community highlights.
+          </p>
+        </div>
+
+        <!-- Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <!-- Card -->
+          <article
+            class="reveal reveal-up delay-sm bg-white overflow-hidden border border-black/5 flex flex-col"
+          >
+            <div class="h-72 overflow-hidden px-4 py-3">
+              <img
+                src="./assets/img-5.jpg"
+                alt="News 1"
+                class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              />
+            </div>
+
+            <div class="px-4 py-3 flex flex-col flex-1 space-y-3">
+              <h3 class="title text-lg">Community Listening Program Launch</h3>
+
+              <p class="text-black/70 text-[16px] leading-relaxed">
+                A new initiative to collect citizen feedback and prioritize
+                local needs in every ward. The program ensures transparency,
+                accountability, and stronger community collaboration.
+              </p>
+
+              <!-- Read More -->
+              <a
+                href="#"
+                class="mt-auto inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)] hover:gap-2 transition-all duration-300"
+              >
+                Read More
+                <i class="fa-solid fa-chevron-right text-xs"></i>
+              </a>
+            </div>
+          </article>
+          <!-- card-2 -->
+          <article
+            class="reveal reveal-up delay-md bg-white overflow-hidden border border-black/5 flex flex-col"
+          >
+            <div class="h-72 overflow-hidden px-4 py-3">
+              <img
+                src="./assets/img-2.jpg"
+                alt="News 1"
+                class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              />
+            </div>
+
+            <div class="px-4 py-3 flex flex-col flex-1 space-y-3">
+              <h3 class="title text-lg">
+                Youth Skills & Employment Initiative Announced
+              </h3>
+
+              <p class="text-black/70 text-[16px] leading-relaxed">
+                Binita Khadka has announced a new Youth Skills & Employment
+                Initiative aimed at empowering young people through technical
+                training and entrepreneurship support. The program will
+                collaborate with local businesses.
+              </p>
+
+              <!-- Read More -->
+              <a
+                href="#"
+                class="mt-auto inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)] hover:gap-2 transition-all duration-300"
+              >
+                Read More
+                <i class="fa-solid fa-chevron-right text-xs"></i>
+              </a>
+            </div>
+          </article>
+          <!-- card-3 -->
+          <article
+            class="reveal reveal-up delay-lg bg-white overflow-hidden border border-black/5 flex flex-col"
+          >
+            <div class="h-72 overflow-hidden px-4 py-3">
+              <img
+                src="./assets/img-3.jpg"
+                alt="News 1"
+                class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              />
+            </div>
+
+            <div class="px-4 py-3 flex flex-col flex-1 space-y-3">
+              <h3 class="title text-lg">
+                Ward-Level Budget Transparency Portal Launched
+              </h3>
+
+              <p class="text-black/70 text-[16px] leading-relaxed">
+                Binita Khadka has officially launched a Ward-Level Budget
+                Transparency Portal to ensure citizens can easily access
+                information about local development spending. The platform
+                allows residents to view allocated budgets.
+              </p>
+
+              <!-- Read More -->
+              <a
+                href="#"
+                class="mt-auto inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)] hover:gap-2 transition-all duration-300"
+              >
+                Read More
+                <i class="fa-solid fa-chevron-right text-xs"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- gallery section  -->
+    <section id="gallery" class="py-12 bg-[var(--primary)]">
+      <div class="px-4 md:px-6 max-w-7xl mx-auto space-y-6">
+        <!-- heading -->
+        <div class="text-center space-y-2">
+          <h2 class="title ">Gallery</h2>
+          <p class="text-black/80 max-w-2xl mx-auto">
+            Moments, events, and community engagement highlights.
+          </p>
+        </div>
+        <!-- content -->
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+          id="galleryGrid"
+        >
+          <!-- Item 1 -->
+          <button
+            type="button"
+            class="reveal reveal-up group overflow-hidden rounded-md border bg-white"
+            data-full="./assets/gallery-1.jpg"
+          >
+            <img
+              src="./assets/gallery-1.jpg"
+              alt="Gallery 1"
+              class="w-full h-64 object-cover group-hover:scale-105 transition duration-300"
+            />
+          </button>
+
+          <!-- Item 2 -->
+          <button
+            type="button"
+            class="reveal reveal-up delay-sm group overflow-hidden rounded-md border bg-white"
+            data-full="./assets/gallery-2.jpg"
+          >
+            <img
+              src="./assets/gallery-2.jpg"
+              alt="Gallery 2"
+              class="w-full h-64 object-cover group-hover:scale-105 transition duration-300"
+            />
+          </button>
+
+          <!-- Item 3 -->
+          <button
+            type="button"
+            class="reveal reveal-up delay-md group overflow-hidden rounded-md border bg-white"
+            data-full="./assets/gallery-3.jpg"
+          >
+            <img
+              src="./assets/gallery-3.jpg"
+              alt="Gallery 3"
+              class="w-full h-64 object-cover group-hover:scale-105 transition duration-300"
+            />
+          </button>
+          <!-- Item 4 -->
+          <button
+            type="button"
+            class="reveal reveal-up group overflow-hidden rounded-md border bg-white"
+            data-full="./assets/gallery-4.jpg"
+          >
+            <img
+              src="./assets/gallery-4.jpg"
+              alt="Gallery 3"
+              class="w-full h-64 object-cover group-hover:scale-105 transition duration-300"
+            />
+          </button>
+          <!-- Item 5 -->
+          <button
+            type="button"
+            class="reveal reveal-up delay-sm group overflow-hidden rounded-md border bg-white"
+            data-full="./assets/gallery-5.jpg"
+          >
+            <img
+              src="./assets/gallery-5.jpg"
+              alt="Gallery 3"
+              class="w-full h-64 object-cover group-hover:scale-105 transition duration-300"
+            />
+          </button>
+          <!-- Item 6 -->
+          <button
+            type="button"
+            class="reveal reveal-up delay-md group overflow-hidden rounded-md border bg-white"
+            data-full="./assets/gallery-6.jpg"
+          >
+            <img
+              src="./assets/gallery-6.jpg"
+              alt="Gallery 3"
+              class="w-full h-64 object-cover group-hover:scale-105 transition duration-300"
+            />
+          </button>
+          <!-- Item 7 -->
+          <button
+            type="button"
+            class="reveal reveal-up group overflow-hidden rounded-md border bg-white"
+            data-full="./assets/gallery-7.jpg"
+          >
+            <img
+              src="./assets/gallery-7.jpg"
+              alt="Gallery 3"
+              class="w-full h-64 object-cover group-hover:scale-105 transition duration-300"
+            />
+          </button>
+          <!-- Item 8 -->
+          <button
+            type="button"
+            class="reveal reveal-up delay-sm group overflow-hidden rounded-md border bg-white"
+            data-full="./assets/gallery-8.jpg"
+          >
+            <img
+              src="./assets/gallery-8.jpg"
+              alt="Gallery 3"
+              class="w-full h-64 object-cover group-hover:scale-105 transition duration-300"
+            />
+          </button>
+          <!-- Item 9 -->
+          <button
+            type="button"
+            class="reveal reveal-up delay-md group overflow-hidden rounded-md border bg-white"
+            data-full="./assets/gallery-9.jpg"
+          >
+            <img
+              src="./assets/gallery-9.jpg"
+              alt="Gallery 3"
+              class="w-full h-64 object-cover group-hover:scale-105 transition duration-300"
+            />
+          </button>
+        </div>
+
+        <!-- Lightbox Modal -->
+        <div
+          id="lightbox"
+          class="fixed inset-0 z-[999] hidden"
+          aria-hidden="true"
+        >
+          <div class="absolute inset-0 bg-black/80"></div>
+
+          <button
+            type="button"
+            id="lightboxClose"
+            class="absolute top-4 right-4 z-30 text-white/90 hover:text-white p-3"
+            aria-label="Close"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+
+          <!-- prev/next -->
+          <button
+            type="button"
+            id="lightboxPrev"
+            class="absolute left-4 md:left-10 z-30 top-1/2 -translate-y-1/2 text-white/90 hover:text-white text-4xl px-3"
+            aria-label="Previous"
+          >
+            <i class="fa fa-chevron-left"></i>
+          </button>
+
+          <button
+            type="button"
+            id="lightboxNext"
+            class="absolute right-4 md:right-10 z-30 top-1/2 -translate-y-1/2 text-white/90 hover:text-white text-4xl px-3"
+            aria-label="Next"
+          >
+            <i class="fa fa-chevron-right"></i>
+          </button>
+
+          <!-- content -->
+          <div
+            class="relative z-10 h-full flex items-center justify-center px-4"
+          >
+            <div class="max-w-5xl w-full">
+              <img
+                id="lightboxImg"
+                src=""
+                alt=""
+                class="mx-auto max-h-[70vh] w-auto rounded-md shadow-2xl"
+              />
+              <p
+                id="lightboxCaption"
+                class="text-white/90 text-sm md:text-base mt-4 text-center"
+              ></p>
+
+              <div
+                id="lightboxThumbs"
+                class="mt-6 flex gap-3 overflow-x-auto pb-2 justify-center"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOG SECTION -->
+    <section id="blog" class="bg-gray-100 py-12">
+      <div class="px-4 md:px-6 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 items-start">
+          <!-- LEFT -->
+          <div class="lg:col-span-4 flex justify-between md:grid space-y-6">
+            <!-- Title -->
+            <div class="reveal reveal-left space-y-2">
+              <h2
+                class="title text-[var(--accent)] text-xl md:text-4xl leading-tight"
+              >
+                Explore Binita’s <br />
+                Thoughts & <br />
+                Insights in <br />
+                Politics
+              </h2>
+            </div>
+
+            <div
+              class="reveal reveal-left flex items-center gap-3 pt-0 md:pt-44"
+            >
+              <button
+                id="blogPrev"
+                class="h-11 w-11 rounded-md bg-white border border-black/10 shadow-sm flex items-center justify-center hover:bg-black/5 transition"
+                aria-label="Previous blog"
+                type="button"
+              >
+                <i class="fa-solid fa-arrow-left text-sm"></i>
+              </button>
+
+              <button
+                id="blogNext"
+                class="h-11 w-11 rounded-md bg-white border border-black/10 shadow-sm flex items-center justify-center hover:bg-black/5 transition"
+                aria-label="Next blog"
+                type="button"
+              >
+                <i class="fa-solid fa-arrow-right text-sm"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- RIGHT -->
+          <div class="lg:col-span-8 min-w-0">
+            <div
+              id="blogTrack"
+              class="reveal reveal-down delay-md flex gap-4 overflow-x-auto scroll-smooth no-scrollbar"
+            >
+              <!-- Card 1 -->
+              <article
+                class="min-w-[85%] sm:min-w-[340px] bg-white rounded-md shadow border border-black/5 p-6 h-[400px] flex flex-col"
+              >
+                <div class="space-y-3">
+                  <p
+                    class="text-xs font-semibold tracking-wider uppercase text-[var(--accent)]"
+                  >
+                    Feb 2026
+                  </p>
+
+                  <h3 class="sub-heading text-lg">
+                    Why transparency builds stronger local trust
+                  </h3>
+
+                  <p class="text-black/70">
+                    A simple approach to public updates, clear timelines, and
+                    open budgeting that keeps citizens informed. A simple
+                    approach to public updates, clear timelines.
+                  </p>
+                </div>
+
+                <a
+                  href="#"
+                  class="mt-auto inline-flex items-center gap-1 text-sm text-black hover:text-[var(--accent)] transition group"
+                >
+                  <span>Read More</span>
+                  <i
+                    class="fa-solid fa-chevron-right text-xs transition-transform duration-300 group-hover:translate-x-1"
+                  ></i>
+                </a>
+              </article>
+              <!-- Card 2 -->
+              <article
+                class="min-w-[85%] sm:min-w-[340px] bg-white rounded-md shadow border border-black/5 p-6 h-[400px] flex flex-col"
+              >
+                <div class="space-y-3">
+                  <p
+                    class="text-xs font-semibold tracking-wider uppercase text-[var(--accent)]"
+                  >
+                    Feb 2026
+                  </p>
+
+                  <h3 class="sub-heading text-lg">
+                    Why transparency builds stronger local trust
+                  </h3>
+
+                  <p class="text-black/70">
+                    A simple approach to public updates, clear timelines, and
+                    open budgeting that keeps citizens informed. A simple
+                    approach to public updates, clear timelines.
+                  </p>
+                </div>
+
+                <a
+                  href="#"
+                  class="mt-auto inline-flex items-center gap-1 text-sm text-black hover:text-[var(--accent)] transition group"
+                >
+                  <span>Read More</span>
+                  <i
+                    class="fa-solid fa-chevron-right text-xs transition-transform duration-300 group-hover:translate-x-1"
+                  ></i>
+                </a>
+              </article>
+              <!-- Card 3 -->
+              <article
+                class="min-w-[85%] sm:min-w-[340px] bg-white rounded-md shadow border border-black/5 p-6 h-[400px] flex flex-col"
+              >
+                <div class="space-y-3">
+                  <p
+                    class="text-xs font-semibold tracking-wider uppercase text-[var(--accent)]"
+                  >
+                    Feb 2026
+                  </p>
+
+                  <h3 class="sub-heading text-lg">
+                    Why transparency builds stronger local trust
+                  </h3>
+
+                  <p class="text-black/70">
+                    A simple approach to public updates, clear timelines, and
+                    open budgeting that keeps citizens informed. A simple
+                    approach to public updates, clear timelines.
+                  </p>
+                </div>
+
+                <a
+                  href="#"
+                  class="mt-auto inline-flex items-center gap-1 text-sm text-black hover:text-[var(--accent)] transition group"
+                >
+                  <span>Read More</span>
+                  <i
+                    class="fa-solid fa-chevron-right text-xs transition-transform duration-300 group-hover:translate-x-1"
+                  ></i>
+                </a>
+              </article>
+              <!-- Card 4 -->
+              <article
+                class="min-w-[85%] sm:min-w-[340px] bg-white rounded-md shadow border border-black/5 p-6 h-[400px] flex flex-col"
+              >
+                <div class="space-y-3">
+                  <p
+                    class="text-xs font-semibold tracking-wider uppercase text-[var(--accent)]"
+                  >
+                    Feb 2026
+                  </p>
+
+                  <h3 class="sub-heading text-lg">
+                    Why transparency builds stronger local trust
+                  </h3>
+
+                  <p class="text-black/70">
+                    A simple approach to public updates, clear timelines, and
+                    open budgeting that keeps citizens informed. A simple
+                    approach to public updates, clear timelines.
+                  </p>
+                </div>
+
+                <a
+                  href="#"
+                  class="mt-auto inline-flex items-center gap-1 text-sm text-black hover:text-[var(--accent)] transition group"
+                >
+                  <span>Read More</span>
+                  <i
+                    class="fa-solid fa-chevron-right text-xs transition-transform duration-300 group-hover:translate-x-1"
+                  ></i>
+                </a>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section
+      id="contact"
+      class="reveal reveal-down delay-md py-12 bg-[var(--primary)]"
+    >
+      <div class="px-4 md:px-6 max-w-7xl mx-auto">
+        <div
+          class="grid grid-cols-1 lg:grid-cols-12 rounded-md overflow-hidden shadow-md"
+        >
+          <!-- LEFT SIDE  -->
+          <div
+            class="lg:col-span-5 bg-[var(--accent)] text-white p-8 md:p-12 flex flex-col justify-between"
+          >
+            <!-- Title -->
+            <div class="space-y-3">
+              <h2 class="title text-white text-2xl md:text-3xl">
+                Be Part of the Change
+              </h2>
+              <p class="font-[Montserrat] text-white/90 leading-relaxed">
+                For public events, partnerships, or community discussions, feel
+                free to reach out directly.
+              </p>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="space-y-6 mt-8">
+              <!-- Email -->
+              <div class="flex items-center gap-4">
+                <div
+                  class="h-12 w-12 rounded-md bg-white/30 flex items-center justify-center"
+                >
+                  <i class="fa-solid fa-envelope text-white"></i>
+                </div>
+                <div>
+                  <p class="text-sm text-white/90">Email</p>
+                  <a href="mailto:info@binitakhadka.com" class="font-semibold">
+                    info@binitakhadka.com
+                  </a>
+                </div>
+              </div>
+
+              <!-- Phone -->
+              <div class="flex items-center gap-4">
+                <div
+                  class="h-12 w-12 rounded-md bg-white/30 flex items-center justify-center"
+                >
+                  <i class="fa-solid fa-phone text-white"></i>
+                </div>
+                <div>
+                  <p class="text-sm text-white/90">Phone</p>
+                  <a href="tel:+9779800000000" class="font-semibold">
+                    +977 98XXXXXXXX
+                  </a>
+                </div>
+              </div>
+
+              <!-- Address -->
+              <div class="flex items-center gap-4">
+                <div
+                  class="h-12 w-12 rounded-md bg-white/30 flex items-center justify-center"
+                >
+                  <i class="fa-solid fa-location-dot text-white"></i>
+                </div>
+                <div>
+                  <p class="text-sm text-white/90">Address</p>
+                  <p class="font-semibold">Kathmandu, Nepal</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT SIDE  -->
+          <div class="lg:col-span-7 bg-white p-8 md:p-12">
+            <form class="space-y-6">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="space-y-2">
+                  <label class="text-sm font-semibold text-black">
+                    Full Name
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Your name"
+                    class="w-full rounded-md border border-black/10 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/40 focus:border-[var(--accent)]"
+                  />
+                </div>
+
+                <div class="space-y-2">
+                  <label class="text-sm font-semibold text-black">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    placeholder="you@example.com"
+                    class="w-full rounded-md border border-black/10 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/40 focus:border-[var(--accent)]"
+                  />
+                </div>
+              </div>
+
+              <div class="space-y-2">
+                <label class="text-sm font-semibold text-black">
+                  Subject
+                </label>
+                <input
+                  type="text"
+                  placeholder="What’s this about?"
+                  class="w-full rounded-md border border-black/10 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/40 focus:border-[var(--accent)]"
+                />
+              </div>
+
+              <div class="space-y-2">
+                <label class="text-sm font-semibold text-black">
+                  Message
+                </label>
+                <textarea
+                  rows="6"
+                  placeholder="Write your message..."
+                  class="w-full rounded-md border border-black/10 px-4 py-3 resize-none focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/40 focus:border-[var(--accent)]"
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn">
+                Send Message
+                <i class="fa-solid fa-paper-plane text-sm"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#111827] text-white">
+      <div class="max-w-7xl mx-auto px-4 md:px-6 py-12">
+        <div class="text-center space-y-6">
+          <h3 class="sub-heading tracking-wider uppercase">Binita Khadka</h3>
+
+          <p class="max-w-2xl mx-auto text-white/70 leading-relaxed">
+            Binita Khadka is committed to people-first leadership built on
+            integrity, transparency, and practical solutions. This platform
+            shares updates, perspectives, and community work focused on
+            long-term progress for everyone.
+          </p>
+
+          <!-- Social Icons -->
+          <div class="flex items-center justify-center gap-4 pt-2">
+            <a
+              href="https://www.facebook.com/binita.khadka.718689"
+              target="_blank"
+              aria-label="Facebook"
+              class="h-11 w-11 rounded-full border border-white/20 flex items-center justify-center text-white/80 hover:text-white hover:border-white/60 transition"
+            >
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a
+              href="#"
+              aria-label="Instagram"
+              class="h-11 w-11 rounded-full border border-white/20 flex items-center justify-center text-white/80 hover:text-white hover:border-white/60 transition"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a
+              href=""
+              target="_blank"
+              aria-label="twitter"
+              class="h-11 w-11 rounded-full border border-white/20 flex items-center justify-center text-white/80 hover:text-white hover:border-white/60 transition"
+            >
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+
+            <a
+              href="#"
+              aria-label="Threads"
+              class="h-11 w-11 rounded-full border border-white/20 flex items-center justify-center text-white/80 hover:text-white hover:border-white/60 transition"
+            >
+              <i class="fa-brands fa-threads"></i>
+            </a>
+
+            <a
+              href="https://www.tiktok.com/@binitakhadka77"
+              target="_blank"
+              aria-label="TikTok"
+              class="h-11 w-11 rounded-full border border-white/20 flex items-center justify-center text-white/80 hover:text-white hover:border-white/60 transition"
+            >
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 py-4">
+          <div
+            class="flex flex-col sm:flex-row items-center justify-between gap-3"
+          >
+            <!-- Left -->
+            <p class="text-white/60 text-sm">
+              © <span id="year"></span> Binita Khadka. All rights reserved.
+            </p>
+
+            <!-- Right -->
+            <div class="flex items-center gap-2 text-white/60 text-sm">
+              <span>Developed by</span>
+
+              <!-- Company Logo -->
+              <img
+                src="./assets/kit.png"
+                alt="Company Logo"
+                class="h-6 w-auto opacity-80 hover:opacity-100 transition"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- scripts -->
+    <script src="./scripts/animation.js"></script>
+    <script src="./scripts/menu.js"></script>
+    <script src="./scripts/gallery.js"></script>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>
