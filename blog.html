@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image" href="./assets/favico.jpg" />
+    <title>Binita Khadka</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- header Section -->
+    <header class="flex items-center justify-center overflow-hidden relative">
+      <!-- NAV -->
+      <nav
+        id="heroNav"
+        class="fixed top-0 left-0 w-full z-50 transition-all duration-300"
+      >
+        <div
+          id="navInner"
+          class="mx-auto max-w-7xl px-4 md:px-6 py-5 flex items-center justify-between transition-all duration-300"
+        >
+          <!-- Logo -->
+          <a
+            href="index.html"
+            id="navBrand"
+            class="font-semibold text-2xl md:text-3xl tracking-wide text-white drop-shadow-lg transition-colors duration-300"
+          >
+            Binita Khadka
+          </a>
+
+          <!-- Desktop Nav -->
+          <div
+            id="desktopNavLinks"
+            class="hidden lg:flex items-center gap-8 text-white font-medium"
+          >
+            <a href="about.html" class="nav-link">About</a>
+            <a href="press.html" class="nav-link">Press</a>
+            <a href="gallery.html" class="nav-link">Gallery</a>
+            <a href="blog.html" class="nav-link">Blog</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+          </div>
+
+          <div class="flex items-center gap-4">
+            <a
+              id="navCta"
+              href="contact.html"
+              class="hidden lg:inline-flex items-center justify-center rounded-full border border-white/60 px-5 py-2.5 text-sm font-semibold text-white hover:bg-white hover:text-black transition-all duration-300"
+            >
+              Join Movement
+            </a>
+
+            <!-- Hamburger: mobile + tablet only -->
+            <button
+              id="menuBtn"
+              class="lg:hidden group inline-flex items-center justify-center rounded-xl w-11 h-11 border border-white/40 bg-white/10 backdrop-blur text-white hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-white/50 transition-all duration-300"
+              aria-label="Open menu"
+              aria-expanded="false"
+            >
+              <span id="burger" class="burger">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </nav>
+      <div id="menuOverlay" class="fixed inset-0 bg-black/60 z-50 hidden"></div>
+      <!-- Off-canvas Menu -->
+      <aside
+        id="sideMenu"
+        class="fixed top-0 right-0 h-full w-full sm:w-[420px] bg-[#F8F9FA] z-[60] translate-x-full transition-transform duration-300 shadow-2xl flex flex-col justify-between"
+        aria-hidden="true"
+      >
+        <div>
+          <div
+            class="p-6 flex items-center justify-between border-b border-black/10"
+          >
+            <a href="#top" class="title text-xl text-[var(--secondary)]">
+              Binita Khadka
+            </a>
+
+            <button
+              id="closeBtn"
+              class="rounded-full w-10 h-10 flex items-center justify-center bg-black/5 hover:bg-black/10 focus:outline-none focus:ring-2 focus:ring-black/20 transition"
+              aria-label="Close menu"
+            >
+              <i class="fa-solid fa-x text-sm"></i>
+            </button>
+          </div>
+
+          <div class="p-6 space-y-8">
+            <ul class="space-y-3">
+              <li>
+                <a class="side-link" href="/press.html"> About </a>
+              </li>
+              <li>
+                <a class="side-link" href="/press.html"> Press </a>
+              </li>
+              <li>
+                <a class="side-link" href="/gallery.html"> Gallery </a>
+              </li>
+              <li>
+                <a class="side-link" href="/blog.html"> Blog </a>
+              </li>
+              <li>
+                <a class="side-link" href="/contact.html"> Contact </a>
+              </li>
+            </ul>
+
+            <div class="flex justify-center">
+              <a href="/contact.html" class="btn w-full text-center">
+                Join The Movement
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 bg-[var(--secondary)]">
+          <div class="flex justify-center flex-wrap gap-3">
+            <a
+              href="https://www.facebook.com/binita.khadka.718689"
+              target="_blank"
+              class="side-social"
+              aria-label="Facebook"
+            >
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a
+              href=""
+              target="_blank"
+              class="side-social"
+              aria-label="Instagram"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="" target="_blank" class="side-social" aria-label="Twitter">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+
+            <a href="" target="_blank" class="side-social" aria-label="Threads">
+              <i class="fa-brands fa-threads"></i>
+            </a>
+
+            <a
+              href="https://www.tiktok.com/@binitakhadka77"
+              target="_blank"
+              class="side-social"
+              aria-label="TikTok"
+            >
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+          </div>
+
+          <div class="pt-5">
+            <p class="text-white/60 text-sm text-center">
+              © <span id="year"></span> Binita Khadka. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </aside>
+    </header>
+
+    <!-- Breadcrumb Section -->
+    <section class="relative pt-32 pb-20 overflow-hidden bg-[var(--secondary)]">
+      <!-- Decorative Accent Blurs -->
+      <div
+        class="absolute -right-24 -bottom-24 w-80 h-80 bg-[var(--accent)]/20 rounded-full blur-3xl"
+      ></div>
+      <div
+        class="absolute -left-24 -top-24 w-80 h-80 bg-white/10 rounded-full blur-3xl"
+      ></div>
+
+      <!-- Subtle Pattern Layer -->
+      <div
+        class="absolute inset-0 opacity-[0.08]"
+        style="
+          background-image: radial-gradient(
+            circle at 1px 1px,
+            var(--white) 1px,
+            transparent 0
+          );
+          background-size: 24px 24px;
+        "
+      ></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-6 text-left">
+        <!-- Page Title -->
+        <h1 class="heading text-white">Blogs</h1>
+
+        <!-- Small underline -->
+        <div class="mt-5 h-0.5 w-32 bg-[var(--accent)]"></div>
+
+        <!-- Breadcrumb Links -->
+        <div
+          class="mt-6 flex items-center justify-start gap-3 text-white/70 text-sm md:text-base"
+        >
+          <a
+            href="index.html"
+            class="flex items-center gap-2 hover:text-[var(--white)] transition"
+          >
+            <i class="fa-solid fa-house text-[var(--accent)]"></i>
+            <span>Home</span>
+          </a>
+
+          <span class="text-[var(--primary)]/50">
+            <i class="fa-solid fa-angles-right"></i>
+          </span>
+
+          <span class="flex items-center gap-2 text-[var(--white)]">
+            <span>Blog</span>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#111827] text-white">
+      <div class="max-w-7xl mx-auto px-4 md:px-6 py-12">
+        <div class="text-center space-y-6">
+          <h3 class="sub-heading tracking-wider uppercase">Binita Khadka</h3>
+
+          <p class="max-w-2xl mx-auto text-white/70 leading-relaxed">
+            Binita Khadka is committed to people-first leadership built on
+            integrity, transparency, and practical solutions. This platform
+            shares updates, perspectives, and community work focused on
+            long-term progress for everyone.
+          </p>
+
+          <!-- Social Icons -->
+          <div class="flex items-center justify-center gap-4 pt-2">
+            <a
+              href="https://www.facebook.com/binita.khadka.718689"
+              target="_blank"
+              aria-label="Facebook"
+              class="h-11 w-11 rounded-full border border-white/20 flex items-center justify-center text-white/80 hover:text-white hover:border-white/60 transition"
+            >
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a
+              href="#"
+              aria-label="Instagram"
+              class="h-11 w-11 rounded-full border border-white/20 flex items-center justify-center text-white/80 hover:text-white hover:border-white/60 transition"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a
+              href=""
+              target="_blank"
+              aria-label="twitter"
+              class="h-11 w-11 rounded-full border border-white/20 flex items-center justify-center text-white/80 hover:text-white hover:border-white/60 transition"
+            >
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+
+            <a
+              href="#"
+              aria-label="Threads"
+              class="h-11 w-11 rounded-full border border-white/20 flex items-center justify-center text-white/80 hover:text-white hover:border-white/60 transition"
+            >
+              <i class="fa-brands fa-threads"></i>
+            </a>
+
+            <a
+              href="https://www.tiktok.com/@binitakhadka77"
+              target="_blank"
+              aria-label="TikTok"
+              class="h-11 w-11 rounded-full border border-white/20 flex items-center justify-center text-white/80 hover:text-white hover:border-white/60 transition"
+            >
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 py-4">
+          <div
+            class="flex flex-col sm:flex-row items-center justify-between gap-3"
+          >
+            <!-- Left -->
+            <p class="text-white/60 text-sm">
+              © <span id="year"></span> Binita Khadka. All rights reserved.
+            </p>
+
+            <!-- Right -->
+            <div class="flex items-center gap-2 text-white/60 text-sm">
+              <span>Developed by</span>
+
+              <!-- Company Logo -->
+              <img
+                src="./assets/kit.png"
+                alt="Company Logo"
+                class="h-6 w-auto opacity-80 hover:opacity-100 transition"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- scripts -->
+    <script src="./scripts/animation.js"></script>
+    <script src="./scripts/menu.js"></script>
+    <script src="./scripts/gallery.js"></script>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>

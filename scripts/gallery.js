@@ -16,6 +16,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let current = 0;
 
+  // Helper utility to find your website's main navigation container framework safely
+  function getHeaderElement() {
+    return (
+      document.querySelector("header") ||
+      document.querySelector("nav") ||
+      document.querySelector(".fixed.top-0") ||
+      document.querySelector(".sticky.top-0")
+    );
+  }
+
   function renderThumbs() {
     if (!thumbsEl) return;
     thumbsEl.innerHTML = "";
@@ -63,8 +73,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function openLightbox(index) {
     if (!lightbox) return;
+
+    // 1. Force the lightbox container to sit on the maximum layout layer possible
+    lightbox.style.zIndex = "99999";
     lightbox.classList.remove("hidden");
+
+    // 2. Lock underlying page scrollbars
     document.body.classList.add("overflow-hidden");
+
+    // 3. Temporarily hide the top navigation bar so it cannot peak above the black overlay
+    const header = getHeaderElement();
+    if (header) {
+      header.style.visibility = "hidden";
+      header.style.opacity = "0";
+      header.style.transition = "opacity 0.2s ease, visibility 0.2s ease";
+    }
+
     openAt(index);
   }
 
@@ -72,6 +96,14 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!lightbox) return;
     lightbox.classList.add("hidden");
     document.body.classList.remove("overflow-hidden");
+
+    // Restore the top navigation bar container layer back to visible action space
+    const header = getHeaderElement();
+    if (header) {
+      header.style.visibility = "";
+      header.style.opacity = "";
+    }
+
     if (imgEl) imgEl.src = "";
   }
 
@@ -105,11 +137,16 @@ document.addEventListener("DOMContentLoaded", function () {
       prev();
     });
 
-  // close when clicking the dark overlay (backdrop)
+  // close when clicking the dark overlay
   if (lightbox) {
     lightbox.addEventListener("click", (e) => {
       // if click is on overlay/background area (not on image area/buttons)
-      if (e.target === lightbox || e.target.classList.contains("bg-black/80")) {
+      if (
+        e.target === lightbox ||
+        e.target.classList.contains("bg-black/80") ||
+        e.target.classList.contains("bg-black/95") ||
+        e.target.id === "lightbox"
+      ) {
         closeLightbox();
       }
     });

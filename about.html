@@ -1,0 +1,755 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image" href="./assets/favico.jpg" />
+    <title>Binita Khadka</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- header Section -->
+    <header class="flex items-center justify-center overflow-hidden relative">
+      <!-- NAV -->
+      <nav
+        id="heroNav"
+        class="fixed top-0 left-0 w-full z-50 transition-all duration-300"
+      >
+        <div
+          id="navInner"
+          class="mx-auto max-w-7xl px-4 md:px-6 py-5 flex items-center justify-between transition-all duration-300"
+        >
+          <!-- Logo -->
+          <a
+            href="index.html"
+            id="navBrand"
+            class="font-semibold text-2xl md:text-3xl tracking-wide text-white drop-shadow-lg transition-colors duration-300"
+          >
+            Binita Khadka
+          </a>
+
+          <!-- Desktop Nav -->
+          <div
+            id="desktopNavLinks"
+            class="hidden lg:flex items-center gap-8 text-white font-medium"
+          >
+            <a href="about.html" class="nav-link">About</a>
+            <a href="press.html" class="nav-link">Press</a>
+            <a href="gallery.html" class="nav-link">Gallery</a>
+            <a href="blog.html" class="nav-link">Blog</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+          </div>
+
+          <div class="flex items-center gap-4">
+            <a
+              id="navCta"
+              href="contact.html"
+              class="hidden lg:inline-flex items-center justify-center rounded-full border border-white/60 px-5 py-2.5 text-sm font-semibold text-white hover:bg-white hover:text-black transition-all duration-300"
+            >
+              Join Movement
+            </a>
+
+            <!-- Hamburger: mobile + tablet only -->
+            <button
+              id="menuBtn"
+              class="lg:hidden group inline-flex items-center justify-center rounded-xl w-11 h-11 border border-white/40 bg-white/10 backdrop-blur text-white hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-white/50 transition-all duration-300"
+              aria-label="Open menu"
+              aria-expanded="false"
+            >
+              <span id="burger" class="burger">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </nav>
+      <div id="menuOverlay" class="fixed inset-0 bg-black/60 z-50 hidden"></div>
+      <!-- Off-canvas Menu -->
+      <aside
+        id="sideMenu"
+        class="fixed top-0 right-0 h-full w-full sm:w-[420px] bg-[#F8F9FA] z-[60] translate-x-full transition-transform duration-300 shadow-2xl flex flex-col justify-between"
+        aria-hidden="true"
+      >
+        <div>
+          <div
+            class="p-6 flex items-center justify-between border-b border-black/10"
+          >
+            <a href="#top" class="title text-xl text-[var(--secondary)]">
+              Binita Khadka
+            </a>
+
+            <button
+              id="closeBtn"
+              class="rounded-full w-10 h-10 flex items-center justify-center bg-black/5 hover:bg-black/10 focus:outline-none focus:ring-2 focus:ring-black/20 transition"
+              aria-label="Close menu"
+            >
+              <i class="fa-solid fa-x text-sm"></i>
+            </button>
+          </div>
+
+          <div class="p-6 space-y-8">
+            <ul class="space-y-3">
+              <li>
+                <a class="side-link" href="/press.html"> About </a>
+              </li>
+              <li>
+                <a class="side-link" href="/press.html"> Press </a>
+              </li>
+              <li>
+                <a class="side-link" href="/gallery.html"> Gallery </a>
+              </li>
+              <li>
+                <a class="side-link" href="/blog.html"> Blog </a>
+              </li>
+              <li>
+                <a class="side-link" href="/contact.html"> Contact </a>
+              </li>
+            </ul>
+
+            <div class="flex justify-center">
+              <a href="/contact.html" class="btn w-full text-center">
+                Join The Movement
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 bg-[var(--secondary)]">
+          <div class="flex justify-center flex-wrap gap-3">
+            <a
+              href="https://www.facebook.com/binita.khadka.718689"
+              target="_blank"
+              class="side-social"
+              aria-label="Facebook"
+            >
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a
+              href=""
+              target="_blank"
+              class="side-social"
+              aria-label="Instagram"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="" target="_blank" class="side-social" aria-label="Twitter">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+
+            <a href="" target="_blank" class="side-social" aria-label="Threads">
+              <i class="fa-brands fa-threads"></i>
+            </a>
+
+            <a
+              href="https://www.tiktok.com/@binitakhadka77"
+              target="_blank"
+              class="side-social"
+              aria-label="TikTok"
+            >
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+          </div>
+
+          <div class="pt-5">
+            <p class="text-white/60 text-sm text-center">
+              © <span id="year"></span> Binita Khadka. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </aside>
+    </header>
+    <!-- Breadcrumb Section -->
+    <section class="relative pt-32 pb-20 overflow-hidden bg-[var(--secondary)]">
+      <div
+        class="absolute -right-24 -bottom-24 w-80 h-80 bg-[var(--accent)]/20 rounded-full blur-3xl"
+      ></div>
+      <div
+        class="absolute -left-24 -top-24 w-80 h-80 bg-white/10 rounded-full blur-3xl"
+      ></div>
+
+      <!-- Subtle Pattern Layer -->
+      <div
+        class="absolute inset-0 opacity-[0.08]"
+        style="
+          background-image: radial-gradient(
+            circle at 1px 1px,
+            var(--white) 1px,
+            transparent 0
+          );
+          background-size: 24px 24px;
+        "
+      ></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-6 text-left">
+        <!-- Page Title -->
+        <h1 class="heading text-white">About Me</h1>
+
+        <!-- Small underline -->
+        <div class="mt-5 h-0.5 w-32 bg-[var(--accent)]"></div>
+
+        <!-- Breadcrumb Links -->
+        <div
+          class="mt-6 flex items-center justify-start gap-3 text-white/70 text-sm md:text-base"
+        >
+          <a
+            href="index.html"
+            class="flex items-center gap-2 hover:text-[var(--white)] transition"
+          >
+            <i class="fa-solid fa-house text-[var(--accent)]"></i>
+            <span>Home</span>
+          </a>
+
+          <span class="text-[var(--primary)]/50">
+            <i class="fa-solid fa-angles-right"></i>
+          </span>
+
+          <span class="flex items-center gap-2 text-[var(--white)]">
+            <span>About</span>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- main -->
+    <section class="py-12 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 md:px-6">
+        <div class="gap-12 items-start">
+          <!-- Left Column: Image with Black Overlay & Socials -->
+          <div class="">
+            <!-- Image Container with Subtle Gradient Overlay -->
+            <div class="relative overflow-hidden">
+              <img
+                src="/assets/abt.jpg"
+                alt="Binita Khadka"
+                class="w-full h-[520px] object-cover"
+              />
+              <div class="absolute inset-0 bg-black/30"></div>
+            </div>
+
+            <!-- Social Media Links -->
+            <div class="flex gap-4 mt-6 justify-start md:justify-center">
+              <a
+                href="https://www.facebook.com/binitakhadka77"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="h-11 w-11 text-slate-700 hover:text-white hover:bg-slate-900 border border-slate-300 rounded-full flex items-center justify-center transition-all duration-200"
+                aria-label="Facebook"
+              >
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/binitakhadka77"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="h-11 w-11 text-slate-700 hover:text-white hover:bg-slate-900 border border-slate-300 rounded-full flex items-center justify-center transition-all duration-200"
+                aria-label="Instagram"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a
+                href="https://www.twitter.com/binitakhadka77"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="h-11 w-11 text-slate-700 hover:text-white hover:bg-slate-900 border border-slate-300 rounded-full flex items-center justify-center transition-all duration-200"
+                aria-label="Twitter"
+              >
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="h-11 w-11 text-slate-700 hover:text-white hover:bg-slate-900 border border-slate-300 rounded-full flex items-center justify-center transition-all duration-200"
+                aria-label="Twitter"
+              >
+                <i class="fa-brands fa-threads"></i>
+              </a>
+
+              <a
+                href="https://www.tiktok.com/@binitakhadka77"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="h-11 w-11 text-slate-700 hover:text-white hover:bg-slate-900 border border-slate-300 rounded-full flex items-center justify-center transition-all duration-200"
+                aria-label="TikTok"
+              >
+                <i class="fa-brands fa-tiktok text-sm"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="space-y-6 pt-2">
+            <div class="flex justify-center">
+              <!-- <span
+                class="text-sm font-bold uppercase tracking-widest text-[var(--accent)] block mb-1"
+                >About Me</span
+              > -->
+              <h2 class="title mt-4">Listening First, Leading Next</h2>
+            </div>
+
+            <!-- content-->
+            <div
+              class="text-[var(--text-gray)] text-left space-y-6 leading-relaxed font-normal text-base md:text-lg"
+            >
+              <p>
+                Binita Khadka represents a modern, highly accountable, and
+                people-focused leadership model built on systemic transparency
+                and measurable civic progress. Shifting away from conventional
+                politics, her platform introduces an active framework where
+                leadership is treated as a measurable public service. By
+                combining strategic long-term planning with immediate grassroots
+                action, she works to bridge the gap between community needs and
+                policy execution.
+              </p>
+
+              <p>
+                Her leadership approach centers entirely on listening
+                first—engaging directly with local neighborhoods, families, and
+                small business owners to understand the true pulse of the
+                community. Rather than offering broad, abstract promises, Binita
+                focuses heavily on implementing practical, everyday solutions
+                that visibly improve living standards, modernize local
+                infrastructure, and protect public resources.
+              </p>
+
+              <p>
+                At the core of her policy framework is a commitment to expanding
+                digital literacy, technical resource access, and stable career
+                paths for the next generation of youth leaders. Concurrently,
+                she champions progressive eco-sustainability, ensuring that
+                current community developments do not compromise the
+                environmental health of tomorrow. She remains dedicated to
+                strengthening local civic institutions from the ground up,
+                making them more resilient, open, and accessible to every
+                citizen.
+              </p>
+
+              <p>
+                This portfolio directly reflects her active public mission for
+                2026: to build unwavering institutional trust, empower
+                historically underrepresented neighborhoods, and deliver a
+                transparent, data-driven local governance model that serves all
+                people equally.
+              </p>
+            </div>
+
+            <!-- Strategic Mission Hook Quote -->
+            <div class="">
+              <p
+                class="title flex justify-start md:justify-center text-xl font-medium text-[#ff1512] italic"
+              >
+                "Leadership should be measured by the doors it opens for others,
+                not by the power it holds."
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Pillars / Values Section -->
+    <section class="py-12 bg-white">
+      <div class="max-w-7xl mx-auto px-4 md:px-6 space-y-12">
+        <div class="max-w-3xl space-y-3">
+          <h2
+            class="title text-3xl font-black uppercase tracking-tight text-[var(--secondary)]"
+          >
+            Platform Priorities
+          </h2>
+          <p class="text-black/70 text-sm md:text-base max-w-xl">
+            Key Pillars of Change
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Card 1 -->
+          <div
+            class="p-6 bg-slate-50 rounded-md border border-slate-100 shadow hover:shadow-md transition-shadow"
+          >
+            <div
+              class="w-12 h-12 bg-[var(--secondary)] rounded-md flex items-center justify-center text-white mb-6 font-medium text-base tracking-wider"
+            >
+              01
+            </div>
+            <h4 class="text-xl font-semibold text-[var(--secondary)] mb-3">
+              Economic Opportunity
+            </h4>
+            <p class="text-[var(--text-gray)] leading-relaxed text-base">
+              Lowering key operational barriers for micro-businesses while
+              engineering vocational training pipelines for youth.
+            </p>
+          </div>
+          <!-- Card 2 -->
+          <div
+            class="p-6 bg-slate-50 rounded-md border border-slate-100 shadow hover:shadow-md transition-shadow"
+          >
+            <div
+              class="w-12 h-12 bg-[var(--secondary)] rounded-md flex items-center justify-center text-white mb-6 font-medium text-base tracking-wider"
+            >
+              02
+            </div>
+            <h4 class="text-xl font-semibold text-[var(--secondary)] mb-3">
+              Transparent Governance
+            </h4>
+            <p class="text-[var(--text-gray)] leading-relaxed text-base">
+              Deploying open tracking frameworks for budget allocation to
+              optimize local accountability and build permanent community trust.
+            </p>
+          </div>
+          <!-- Card 3 -->
+          <div
+            class="p-6 bg-slate-50 rounded-md border border-slate-100 shadow hover:shadow-md transition-shadow"
+          >
+            <div
+              class="w-12 h-12 bg-[var(--secondary)] rounded-md flex items-center justify-center text-white mb-6 font-medium text-base tracking-wider"
+            >
+              03
+            </div>
+            <h4 class="text-xl font-semibold text-[var(--secondary)] mb-3">
+              Sustainable Infrastructure
+            </h4>
+            <p class="text-[var(--text-gray)] leading-relaxed text-base">
+              Upgrading public transit nodes and protective community utility
+              grids to natively withstand upcoming climate pressures.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Track Record / Visual Timeline Section -->
+    <section class="py-12 bg-[var(--primary)]">
+      <div class="max-w-7xl mx-auto px-4 md:px-6 space-y-12">
+        <!-- Header Block -->
+        <div class="max-w-3xl space-y-3">
+          <h2
+            class="title text-3xl font-black uppercase tracking-tight text-[var(--secondary)]"
+          >
+            The Journey So Far
+          </h2>
+          <p class="text-black/70 text-sm md:text-base max-w-xl">
+            Milestones & Track Record
+          </p>
+        </div>
+
+        <!-- Timeline Wrapper  -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 gap-12 relative pt-8 md:pt-0"
+        >
+          <!-- Horizontal Connecting Line  -->
+          <div
+            class="hidden md:block absolute top-[28px] left-4 right-4 h-[1px] bg-slate-300 z-0"
+          ></div>
+
+          <!-- Item 1 -->
+          <div class="relative pl-6 md:pl-0 md:pt-12 z-10 group">
+            <!-- Circle Indicator Dot  -->
+            <div
+              class="absolute left-0 top-1.5 md:left-4 md:top-6 w-4 h-4 rounded-full bg-[var(--accent)] ring-4 ring-slate-50 transition-transform group-hover:scale-110"
+            ></div>
+            <!-- Vertical helper border for clean mobile display -->
+            <div
+              class="md:hidden absolute left-[7px] top-5 bottom-0 w-0.5 bg-slate-300 -mb-12"
+            ></div>
+
+            <div class="md:px-4 space-y-1">
+              <span
+                class="text-sm font-semibold text-[var(--accent)] tracking-wider block"
+                >2018 — 2021</span
+              >
+              <h4 class="text-lg font-semibold text-[var(--accent)]">
+                Grassroots Advocacy Lead
+              </h4>
+              <p class="text-[var(--text-gray)] text-sm leading-relaxed">
+                Organized and spearheaded micro-finance projects that
+                successfully aided 150+ small, women-led agricultural businesses
+                locally.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="relative pl-6 md:pl-0 md:pt-12 z-10 group">
+            <!-- Circle Indicator Dot -->
+            <div
+              class="absolute left-0 top-1.5 md:left-4 md:top-6 w-4 h-4 rounded-full bg-[var(--secondary)] ring-4 ring-slate-50 transition-transform group-hover:scale-110"
+            ></div>
+            <!-- Vertical helper border for clean mobile display -->
+            <div
+              class="md:hidden absolute left-[7px] top-5 bottom-0 w-0.5 bg-slate-300 -mb-12"
+            ></div>
+
+            <div class="md:px-4 space-y-1">
+              <span
+                class="text-sm font-semibold text-[var(--secondary)] tracking-wider block"
+                >2022 — 2024</span
+              >
+              <h4 class="text-lg font-semibold text-[var(--secondary)]">
+                Community Policy Consultant
+              </h4>
+              <p class="text-[var(--text-gray)] text-sm leading-relaxed">
+                Collaborated directly with municipal councils to refine and
+                draft youth employment initiatives and waste infrastructure
+                updates.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="relative pl-6 md:pl-0 md:pt-12 z-10 group">
+            <!-- Circle Indicator Dot -->
+            <div
+              class="absolute left-0 top-1.5 md:left-4 md:top-6 w-4 h-4 rounded-full bg-slate-500 ring-4 ring-slate-50 transition-transform group-hover:scale-110"
+            ></div>
+
+            <div class="md:px-4 space-y-1">
+              <span
+                class="text-sm font-semibold text-slate-500 tracking-wider block"
+                >2026 & Beyond</span
+              >
+              <h4 class="text-lg font-semibold text-slate-500">
+                The Mission Ahead
+              </h4>
+              <p class="text-[var(--text-gray)] text-sm leading-relaxed">
+                Launching a completely decentralized, public-first governance
+                infrastructure model prioritizing equity and strict
+                administrative metrics.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-12 bg-[var(--primary)]">
+      <div class="px-4 md:px-6 max-w-7xl mx-auto reveal reveal-down delay-md">
+        <div
+          class="grid grid-cols-1 lg:grid-cols-12 rounded-md overflow-hidden shadow-md"
+        >
+          <!-- LEFT SIDE  -->
+          <div
+            class="lg:col-span-5 bg-[var(--accent)] text-white p-8 md:p-12 flex flex-col justify-between"
+          >
+            <!-- Title -->
+            <div class="space-y-3">
+              <h2 class="title text-white text-2xl md:text-3xl">
+                Be Part of the Change
+              </h2>
+              <p class="font-[Montserrat] text-white/90 leading-relaxed">
+                For public events, partnerships, or community discussions, feel
+                free to reach out directly.
+              </p>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="space-y-6 mt-8">
+              <!-- Email -->
+              <div class="flex items-center gap-4">
+                <div
+                  class="h-12 w-12 rounded-md bg-white/30 flex items-center justify-center"
+                >
+                  <i class="fa-solid fa-envelope text-white"></i>
+                </div>
+                <div>
+                  <p class="text-sm text-white/90">Email</p>
+                  <a href="mailto:info@binitakhadka.com" class="font-semibold">
+                    info@binitakhadka.com
+                  </a>
+                </div>
+              </div>
+
+              <!-- Phone -->
+              <div class="flex items-center gap-4">
+                <div
+                  class="h-12 w-12 rounded-md bg-white/30 flex items-center justify-center"
+                >
+                  <i class="fa-solid fa-phone text-white"></i>
+                </div>
+                <div>
+                  <p class="text-sm text-white/90">Phone</p>
+                  <a href="tel:+9779800000000" class="font-semibold">
+                    +977 98XXXXXXXX
+                  </a>
+                </div>
+              </div>
+
+              <!-- Address -->
+              <div class="flex items-center gap-4">
+                <div
+                  class="h-12 w-12 rounded-md bg-white/30 flex items-center justify-center"
+                >
+                  <i class="fa-solid fa-location-dot text-white"></i>
+                </div>
+                <div>
+                  <p class="text-sm text-white/90">Address</p>
+                  <p class="font-semibold">Kathmandu, Nepal</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT SIDE  -->
+          <div class="lg:col-span-7 bg-white p-8 md:p-12">
+            <form class="space-y-6">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="space-y-2">
+                  <label class="text-sm font-semibold text-black">
+                    Full Name
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Your name"
+                    class="w-full rounded-md border border-black/10 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/40 focus:border-[var(--accent)]"
+                  />
+                </div>
+
+                <div class="space-y-2">
+                  <label class="text-sm font-semibold text-black">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    placeholder="you@example.com"
+                    class="w-full rounded-md border border-black/10 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/40 focus:border-[var(--accent)]"
+                  />
+                </div>
+              </div>
+
+              <div class="space-y-2">
+                <label class="text-sm font-semibold text-black">
+                  Subject
+                </label>
+                <input
+                  type="text"
+                  placeholder="What’s this about?"
+                  class="w-full rounded-md border border-black/10 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/40 focus:border-[var(--accent)]"
+                />
+              </div>
+
+              <div class="space-y-2">
+                <label class="text-sm font-semibold text-black">
+                  Message
+                </label>
+                <textarea
+                  rows="6"
+                  placeholder="Write your message..."
+                  class="w-full rounded-md border border-black/10 px-4 py-3 resize-none focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/40 focus:border-[var(--accent)]"
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn">
+                Send Message
+                <i class="fa-solid fa-paper-plane text-sm"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#111827] text-white">
+      <div class="max-w-7xl mx-auto px-4 md:px-6 py-12">
+        <div class="text-center space-y-6">
+          <h3 class="sub-heading tracking-wider uppercase">Binita Khadka</h3>
+
+          <p class="max-w-2xl mx-auto text-white/70 leading-relaxed">
+            Binita Khadka is committed to people-first leadership built on
+            integrity, transparency, and practical solutions. This platform
+            shares updates, perspectives, and community work focused on
+            long-term progress for everyone.
+          </p>
+
+          <!-- Social Icons -->
+          <div class="flex items-center justify-center gap-4 pt-2">
+            <a
+              href="https://www.facebook.com/binita.khadka.718689"
+              target="_blank"
+              aria-label="Facebook"
+              class="h-11 w-11 rounded-full border border-white/20 flex items-center justify-center text-white/80 hover:text-white hover:border-white/60 transition"
+            >
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a
+              href="#"
+              aria-label="Instagram"
+              class="h-11 w-11 rounded-full border border-white/20 flex items-center justify-center text-white/80 hover:text-white hover:border-white/60 transition"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a
+              href=""
+              target="_blank"
+              aria-label="twitter"
+              class="h-11 w-11 rounded-full border border-white/20 flex items-center justify-center text-white/80 hover:text-white hover:border-white/60 transition"
+            >
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+
+            <a
+              href="#"
+              aria-label="Threads"
+              class="h-11 w-11 rounded-full border border-white/20 flex items-center justify-center text-white/80 hover:text-white hover:border-white/60 transition"
+            >
+              <i class="fa-brands fa-threads"></i>
+            </a>
+
+            <a
+              href="https://www.tiktok.com/@binitakhadka77"
+              target="_blank"
+              aria-label="TikTok"
+              class="h-11 w-11 rounded-full border border-white/20 flex items-center justify-center text-white/80 hover:text-white hover:border-white/60 transition"
+            >
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 py-4">
+          <div
+            class="flex flex-col sm:flex-row items-center justify-between gap-3"
+          >
+            <!-- Left -->
+            <p class="text-white/60 text-sm">
+              © <span id="year"></span> Binita Khadka. All rights reserved.
+            </p>
+
+            <!-- Right -->
+            <div class="flex items-center gap-2 text-white/60 text-sm">
+              <span>Developed by</span>
+
+              <!-- Company Logo -->
+              <img
+                src="./assets/kit.png"
+                alt="Company Logo"
+                class="h-6 w-auto opacity-80 hover:opacity-100 transition"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- scripts -->
+    <script src="./scripts/animation.js"></script>
+    <script src="./scripts/menu.js"></script>
+    <script src="./scripts/gallery.js"></script>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>

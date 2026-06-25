@@ -17,55 +17,84 @@
   <body>
     <!-- Hero Section -->
     <header
-      class="hero-parallax-bg flex items-center justify-center overflow-hidden relative"
+      id="top"
+      class="hero-parallax-bg min-h-screen flex items-center justify-center overflow-hidden relative"
     >
-      <!-- <div class="hero-overlay"></div> -->
-
-      <!-- NAV  -->
+      <!-- NAV -->
       <nav
         id="heroNav"
         class="fixed top-0 left-0 w-full z-50 transition-all duration-300"
       >
         <div
           id="navInner"
-          class="mx-auto max-w-7xl px-6 py-5 flex items-center justify-between"
+          class="mx-auto max-w-7xl px-4 md:px-6 py-5 flex items-center justify-between transition-all duration-300"
         >
-          <!-- "Logo" text -->
-          <a href="#top" class="font-semibold text-2xl" id="navBrand"> Binita Khadka </a>
-
-          <!-- Hamburger-->
-          <button
-            id="menuBtn"
-            class="group inline-flex items-center justify-center rounded-xl focus:outline-none focus:ring-2 focus:ring-white/50"
-            aria-label="Open menu"
-            aria-expanded="false"
+          <!-- Logo -->
+          <a
+            href="index.html"
+            id="navBrand"
+            class="font-semibold text-2xl md:text-3xl tracking-wide text-white drop-shadow-lg transition-colors duration-300"
           >
-            <span id="burger" class="burger">
-              <span class="line"></span>
-              <span class="line"></span>
-              <span class="line"></span>
-            </span>
-          </button>
+            Binita Khadka
+          </a>
+
+          <!-- Desktop Nav -->
+          <div
+            id="desktopNavLinks"
+            class="hidden lg:flex items-center gap-8 text-white font-medium"
+          >
+            <a href="about.html" class="nav-link">About</a>
+            <a href="press.html" class="nav-link">Press</a>
+            <a href="gallery.html" class="nav-link">Gallery</a>
+            <a href="blog.html" class="nav-link">Blog</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+          </div>
+
+          <div class="flex items-center gap-4">
+            <a
+              id="navCta"
+              href="contact.html"
+              class="hidden lg:inline-flex items-center justify-center rounded-full border border-white/60 px-5 py-2.5 text-sm font-semibold text-white hover:bg-white hover:text-black transition-all duration-300"
+            >
+              Join Movement
+            </a>
+
+            <!-- Hamburger: mobile + tablet only -->
+            <button
+              id="menuBtn"
+              class="lg:hidden group inline-flex items-center justify-center rounded-xl w-11 h-11 border border-white/40 bg-white/10 backdrop-blur text-white hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-white/50 transition-all duration-300"
+              aria-label="Open menu"
+              aria-expanded="false"
+            >
+              <span id="burger" class="burger">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+              </span>
+            </button>
+          </div>
         </div>
       </nav>
 
-      <div id="menuOverlay" class="fixed inset-0 bg-black/50 z-50 hidden"></div>
+      <div id="menuOverlay" class="fixed inset-0 bg-black/60 z-50 hidden"></div>
 
       <!-- Off-canvas Menu -->
       <aside
         id="sideMenu"
-        class="fixed top-0 right-0 h-full w-full md:w-[25%] bg-white z-[60] translate-x-full transition-transform duration-300 shadow-2xl flex flex-col justify-between"
+        class="fixed top-0 right-0 h-full w-full sm:w-[420px] bg-[#F8F9FA] z-[60] translate-x-full transition-transform duration-300 shadow-2xl flex flex-col justify-between"
         aria-hidden="true"
       >
         <div>
           <div
             class="p-6 flex items-center justify-between border-b border-black/10"
           >
-            <a href="#top" class="title text-xl"> Binita Khadka </a>
+            <a href="" class="title text-xl text-[var(--secondary)]">
+              Binita Khadka
+            </a>
 
             <button
               id="closeBtn"
-              class="rounded-full px-4 py-2 hover:bg-black/5 focus:outline-none focus:ring-2 focus:ring-black/20"
+              class="rounded-full w-10 h-10 flex items-center justify-center bg-black/5 hover:bg-black/10 focus:outline-none focus:ring-2 focus:ring-black/20 transition"
               aria-label="Close menu"
             >
               <i class="fa-solid fa-x text-sm"></i>
@@ -73,137 +102,131 @@
           </div>
 
           <div class="p-6 space-y-8">
-            <ul class="space-y-6">
+            <ul class="space-y-3">
               <li>
-                <a
-                  class="block text-black/80 hover:text-black font-medium text-xl"
-                  href="#about"
-                  >About</a
-                >
+                <a class="side-link" href="/about.html"> About </a>
               </li>
               <li>
-                <a
-                  class="block text-black/80 hover:text-black font-medium text-xl"
-                  href="#news"
-                  >News</a
-                >
+                <a class="side-link" href="/press.html"> Press </a>
               </li>
               <li>
-                <a
-                  class="block text-black/80 hover:text-black font-medium text-xl"
-                  href="#gallery"
-                  >Gallery</a
-                >
+                <a class="side-link" href="/gallery.html"> Gallery </a>
               </li>
               <li>
-                <a
-                  class="block text-black/80 hover:text-black font-medium text-xl"
-                  href="#blog"
-                  >Blog</a
-                >
+                <a class="side-link" href="/blog.html"> Blog </a>
               </li>
               <li>
-                <a
-                  class="block text-black/80 hover:text-black font-medium text-xl"
-                  href="#contact"
-                  >Contact</a
-                >
+                <a class="side-link" href="/contact.html"> Contact </a>
               </li>
             </ul>
 
             <div class="flex justify-center">
-              <a href="#contact" class="btn w-full text-center">
+              <a
+                href="/contact.html"
+                class="rounded-full border border-[#1b263b] px-6 py-2.5 text-sm font-semibold text-white bg-[#1b263b] hover:bg-transparent hover:text-[#1b263b] transition-all duration-300 shadow-md"
+              >
                 Join The Movement
               </a>
             </div>
           </div>
         </div>
 
-        <div class="p-6 bg-black/5">
-          <div class="flex justify-center space-x-3">
+        <div class="p-6 bg-[var(--secondary)]">
+          <div class="flex justify-center flex-wrap gap-3">
             <a
               href="https://www.facebook.com/binita.khadka.718689"
               target="_blank"
-              class="text-black/80 hover:text-black border border-black/50 rounded-full p-4 flex items-center justify-center"
+              class="side-social"
               aria-label="Facebook"
             >
               <i class="fa-brands fa-facebook-f"></i>
             </a>
+
             <a
               href=""
               target="_blank"
-              class="text-black/80 hover:text-black border border-black/50 rounded-full p-3 flex items-center justify-center"
+              class="side-social"
               aria-label="Instagram"
             >
               <i class="fa-brands fa-instagram"></i>
             </a>
-            <a
-              href=""
-              target="_blank"
-              class="text-black/80 hover:text-black border border-black/50 rounded-full p-3 flex items-center justify-center"
-              aria-label="twitter"
-            >
+
+            <a href="" target="_blank" class="side-social" aria-label="Twitter">
               <i class="fa-brands fa-x-twitter"></i>
             </a>
-            <a
-              href=""
-              target="_blank"
-              class="text-black/80 hover:text-black border border-black/50 rounded-full p-3 flex items-center justify-center"
-              aria-label="threads"
-            >
+
+            <a href="" target="_blank" class="side-social" aria-label="Threads">
               <i class="fa-brands fa-threads"></i>
             </a>
+
             <a
               href="https://www.tiktok.com/@binitakhadka77"
               target="_blank"
-              class="text-black/80 hover:text-black border border-black/50 rounded-full p-3 flex items-center justify-center"
+              class="side-social"
               aria-label="TikTok"
             >
               <i class="fa-brands fa-tiktok"></i>
             </a>
           </div>
-          <div class="p-3">
-            <p class="text-black/60 text-sm text-center">
+
+          <div class="pt-5">
+            <p class="text-white/60 text-sm text-center">
               © <span id="year"></span> Binita Khadka. All rights reserved.
             </p>
           </div>
         </div>
       </aside>
 
-      <!-- hero CONTENT -->
-      <div class="relative z-10 text-center px-6 max-w-4xl space-y-6">
-        <span
-          class="reveal reveal-down delay-sm block sub-heading text-[var(--accent)]"
-        >
-          Leadership for 2026
-        </span>
+      <!-- Hero Content -->
+      <div
+        class="relative z-10 px-6 max-w-7xl w-full mx-auto pt-32 pb-20 min-h-[80vh] flex flex-col justify-center"
+      >
+        <div class="max-w-4xl text-left space-y-4">
+          <!-- Conversational Intro Header with Accent Anchor -->
+          <p
+            class="reveal reveal-up text-xl md:text-3xl font-medium text-[#F8F9FA] tracking-tight opacity-95 flex items-center gap-3"
+          >
+            Hi, I'm <span class="font-bold text-white ml-1">Binita Khadka</span>
+          </p>
 
-        <h1
-          class="reveal reveal-up delay-lg heading text-[var(--primary)] uppercase tracking-wider"
-        >
-          Binita Khadka
-        </h1>
+          <!--title -->
+          <h1
+            class="reveal reveal-up delay-md heading text-white text-5xl sm:text-6xl md:text-8xl font-black tracking-tight leading-[0.95] uppercase drop-shadow-sm"
+          >
+            Community <br />
+            <span class="text-[var(--accent)] transition-colors duration-300"
+              >Leader</span
+            >
+            <span class="text-white/40">&amp;</span> <br />
+            Advocate
+          </h1>
 
-        <p
-          class="font-[Montserrat] font-medium text-[#F8F9FA] text-lg md:text-2xl mb-10 max-w-2xl mx-auto leading-[30px] opacity-90"
-        >
-          A vision built on integrity, community progress, and a sustainable
-          future for all.
-        </p>
-
-        <div class="reveal reveal-left delay-md">
-          <a href="#contact" class="btn"> Join The Movement </a>
+          <div
+            class="pt-6 max-w-xl reveal reveal-up delay-lg flex flex-col gap-4"
+          >
+            <p
+              class="font-normal text-[#F8F9FA] text-base md:text-lg leading-relaxed opacity-85"
+            >
+              Driven by
+              <span class="text-[var(--accent)] font-semibold"
+                >grassroots advocacy</span
+              >
+              and civic action, I build sustainable solutions designed to
+              empower our neighborhoods and secure public integrity for a better
+              future.
+            </p>
+          </div>
         </div>
       </div>
 
       <!-- Scroll Down Indicator -->
       <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20">
         <a href="#about" class="flex flex-col items-center gap-2 group">
-          <span
+          <!-- <span
             class="text-white text-xs tracking-widest uppercase opacity-80 group-hover:opacity-100 transition"
           >
             Scroll down
-          </span>
+          </span> -->
 
           <div class="mouse">
             <div class="wheel"></div>
@@ -215,55 +238,84 @@
     <!-- ABOUT SECTION -->
     <section id="about" class="scroll-mt-20 relative z-20 bg-[#F8F9FA]">
       <div class="max-w-7xl mx-auto px-4 md:px-6 py-12">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          <!-- LEFT TEXT -->
-          <div class="reveal reveal-left lg:col-span-6 space-y-4">
-            <h2 class="title ">About Binita</h2>
-
-            <p>
-              Binita Khadka represents a modern, accountable, and people-focused
-              leadership model built on transparency and measurable progress.
-            </p>
-
-            <p>
-              Her approach centers on listening first, engaging directly with
-              communities, and implementing solutions that improve everyday life
-              — strengthening institutions, expanding opportunities for youth,
-              and ensuring long-term sustainability.
-            </p>
-
-            <p>
-              This portfolio reflects her mission for 2026: to build trust,
-              empower communities, and deliver practical, transparent
-              governance.
-            </p>
-          </div>
-
-          <!-- RIGHT IMAGE -->
+        <div
+          class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center"
+        >
+          <!-- left IMAGE -->
           <div class="reveal reveal-down lg:col-span-6">
-            <div class="relative rounded-md overflow-hidden shadow">
-              <img
-                src="./assets/about-img.jpg"
-                alt="Binita Khadka"
-                class="w-full h-[500px] object-cover"
-              />
+            <div class="relative">
+              <!-- Sleek top Angled Corner Badge -->
+              <div
+                class="absolute -top-3 -left-3 h-14 w-14 bg-[var(--accent)] hidden sm:block pointer-events-none [clip-path:polygon(0_0,_100%_0,_0_100%)]"
+              ></div>
+              <!-- Sleek bottom Angled Corner Badge -->
 
               <div
-                class="absolute inset-0 bg-gradient-to-b from-black/20 to-black/80"
+                class="absolute -bottom-3 -right-3 h-14 w-14 bg-[var(--accent)] hidden sm:block pointer-events-none [clip-path:polygon(100%_100%,_0_100%,_100%_0)]"
               ></div>
+
+              <div class="relative overflow-hidden shadow">
+                <img
+                  src="./assets/img8.jpg"
+                  alt="Binita Khadka"
+                  class="w-full h-[420px] md:h-[560px] object-cover"
+                />
+
+                <div
+                  class="absolute inset-0 bg-gradient-to-b from-black/10 via-black/10 to-black/75"
+                ></div>
+              </div>
+            </div>
+          </div>
+          <!-- right TEXT -->
+          <div class="reveal reveal-left lg:col-span-6 space-y-6">
+            <div class="space-y-3">
+              <h2 class="title">
+                A
+                <span class="text-[var(--accent)]"> People-Focused Voice </span>
+                for Transparent Leadership
+              </h2>
+            </div>
+
+            <div class="space-y-4 text-gray-700 leading-relaxed">
+              <p>
+                Binita Khadka represents a modern, accountable, and
+                people-focused leadership model built on transparency, service,
+                and measurable progress.
+              </p>
+
+              <p>
+                Her approach centers on listening first, engaging directly with
+                communities, and implementing solutions that improve everyday
+                life — strengthening institutions, expanding opportunities for
+                youth, and ensuring long-term sustainability.
+              </p>
+            </div>
+            <!-- BUTTONS -->
+            <div class="flex flex-col sm:flex-row gap-4 pt-2">
+              <a
+                href="about.html"
+                class="w-fit rounded-full border border-[#1b263b] px-6 py-2.5 text-sm font-semibold text-white bg-[#1b263b] hover:bg-transparent hover:text-[#1b263b] transition-all duration-300 shadow-md"
+              >
+                Read More
+              </a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- news section -->
-    <section id="news" class="bg-[var(--secondary)] py-12">
+    <!-- press section -->
+    <section class="bg-[var(--secondary)] py-12">
       <div class="px-4 md:px-6 max-w-7xl mx-auto space-y-6">
         <!-- Title -->
         <div class="text-center space-y-2">
-          <h2 class="title text-white">News</h2>
-          <p class="text-white/80 max-w-2xl mx-auto">
+          <h2
+            class="title text-3xl font-black uppercase tracking-tight text-[#ffffff]"
+          >
+            Press
+          </h2>
+          <p class="text-white/70 text-sm md:text-base">
             Latest updates, announcements, and community highlights.
           </p>
         </div>
@@ -277,13 +329,15 @@
             <div class="h-72 overflow-hidden px-4 py-3">
               <img
                 src="./assets/img-5.jpg"
-                alt="News 1"
+                alt="Press 1"
                 class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
               />
             </div>
 
             <div class="px-4 py-3 flex flex-col flex-1 space-y-3">
-              <h3 class="title text-lg">Community Listening Program Launch</h3>
+              <h3 class="sub-heading text-lg">
+                Community Listening Program Launch
+              </h3>
 
               <p class="text-black/70 text-[16px] leading-relaxed">
                 A new initiative to collect citizen feedback and prioritize
@@ -308,13 +362,13 @@
             <div class="h-72 overflow-hidden px-4 py-3">
               <img
                 src="./assets/img-2.jpg"
-                alt="News 1"
+                alt="press 1"
                 class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
               />
             </div>
 
             <div class="px-4 py-3 flex flex-col flex-1 space-y-3">
-              <h3 class="title text-lg">
+              <h3 class="sub-heading text-lg">
                 Youth Skills & Employment Initiative Announced
               </h3>
 
@@ -342,13 +396,13 @@
             <div class="h-72 overflow-hidden px-4 py-3">
               <img
                 src="./assets/img-3.jpg"
-                alt="News 1"
+                alt="press 1"
                 class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
               />
             </div>
 
             <div class="px-4 py-3 flex flex-col flex-1 space-y-3">
-              <h3 class="title text-lg">
+              <h3 class="sub-heading text-lg">
                 Ward-Level Budget Transparency Portal Launched
               </h3>
 
@@ -373,141 +427,114 @@
       </div>
     </section>
 
-    <!-- gallery section  -->
-    <section id="gallery" class="py-12 bg-[var(--primary)]">
-      <div class="px-4 md:px-6 max-w-7xl mx-auto space-y-6">
-        <!-- heading -->
-        <div class="text-center space-y-2">
-          <h2 class="title ">Gallery</h2>
-          <p class="text-black/80 max-w-2xl mx-auto">
-            Moments, events, and community engagement highlights.
-          </p>
-        </div>
-        <!-- content -->
+    <!-- Gallery Section -->
+    <section class="py-12 bg-gray-200">
+      <div class="px-4 md:px-6 max-w-7xl mx-auto space-y-8">
+        <!-- Flex Header -->
         <div
-          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+          class="flex flex-col sm:flex-row sm:items-end justify-between gap-4"
+        >
+          <div class="space-y-1 text-left">
+            <h2
+              class="title text-3xl font-black uppercase tracking-tight text-[var(--secondary)]"
+            >
+              Gallery
+            </h2>
+            <p class="text-black/70 text-sm md:text-base max-w-xl">
+              Moments, events, and community engagement highlights.
+            </p>
+          </div>
+          <div>
+            <a
+              href="/gallery"
+              class="inline-flex items-center gap-2 text-[var(--secondary)] text-sm font-semibold tracking-wider uppercase transition-all duration-300 border-b border-[var(--secondary)] pb-1 group hover:border-[var(--accent)] hover:text-[var(--accent)]"
+            >
+              View All
+              <i
+                class="fa-solid fa-chevron-right text-[var(--secondary)] transition-transform group-hover:translate-x-1 group-hover:text-[var(--accent)]"
+              ></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Balanced 5-Photo Bento Grid Content -->
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 auto-rows-[260px]"
           id="galleryGrid"
         >
-          <!-- Item 1 -->
+          <!-- Item 1-->
           <button
             type="button"
-            class="reveal reveal-up group overflow-hidden rounded-md border bg-white"
-            data-full="./assets/gallery-1.jpg"
+            class="reveal reveal-up group overflow-hidden rounded-md bg-white sm:col-span-2 sm:row-span-2"
+            data-full="./assets/img4.jpg"
           >
             <img
-              src="./assets/gallery-1.jpg"
-              alt="Gallery 1"
-              class="w-full h-64 object-cover group-hover:scale-105 transition duration-300"
+              src="./assets/img4.jpg"
+              alt="Community Spotlight"
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
             />
           </button>
 
           <!-- Item 2 -->
           <button
             type="button"
-            class="reveal reveal-up delay-sm group overflow-hidden rounded-md border bg-white"
-            data-full="./assets/gallery-2.jpg"
+            class="reveal reveal-up delay-sm group overflow-hidden rounded-md bg-white sm:row-span-2"
+            data-full="./assets/img3.jpg"
           >
             <img
-              src="./assets/gallery-2.jpg"
-              alt="Gallery 2"
-              class="w-full h-64 object-cover group-hover:scale-105 transition duration-300"
+              src="./assets/img3.jpg"
+              alt="Event Presentation"
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
             />
           </button>
 
           <!-- Item 3 -->
           <button
             type="button"
-            class="reveal reveal-up delay-md group overflow-hidden rounded-md border bg-white"
+            class="reveal reveal-up delay-md group overflow-hidden rounded-md bg-white"
             data-full="./assets/gallery-3.jpg"
           >
             <img
               src="./assets/gallery-3.jpg"
-              alt="Gallery 3"
-              class="w-full h-64 object-cover group-hover:scale-105 transition duration-300"
+              alt="Grassroots Meeting"
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
             />
           </button>
-          <!-- Item 4 -->
+
+          <!-- Item 4-->
           <button
             type="button"
-            class="reveal reveal-up group overflow-hidden rounded-md border bg-white"
+            class="reveal reveal-up group overflow-hidden rounded-md bg-white"
             data-full="./assets/gallery-4.jpg"
           >
             <img
               src="./assets/gallery-4.jpg"
-              alt="Gallery 3"
-              class="w-full h-64 object-cover group-hover:scale-105 transition duration-300"
+              alt="Civic Forum"
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
             />
           </button>
+
           <!-- Item 5 -->
           <button
             type="button"
-            class="reveal reveal-up delay-sm group overflow-hidden rounded-md border bg-white"
+            class="reveal reveal-up delay-sm group overflow-hidden rounded-md bg-white"
             data-full="./assets/gallery-5.jpg"
           >
             <img
               src="./assets/gallery-5.jpg"
-              alt="Gallery 3"
-              class="w-full h-64 object-cover group-hover:scale-105 transition duration-300"
-            />
-          </button>
-          <!-- Item 6 -->
-          <button
-            type="button"
-            class="reveal reveal-up delay-md group overflow-hidden rounded-md border bg-white"
-            data-full="./assets/gallery-6.jpg"
-          >
-            <img
-              src="./assets/gallery-6.jpg"
-              alt="Gallery 3"
-              class="w-full h-64 object-cover group-hover:scale-105 transition duration-300"
-            />
-          </button>
-          <!-- Item 7 -->
-          <button
-            type="button"
-            class="reveal reveal-up group overflow-hidden rounded-md border bg-white"
-            data-full="./assets/gallery-7.jpg"
-          >
-            <img
-              src="./assets/gallery-7.jpg"
-              alt="Gallery 3"
-              class="w-full h-64 object-cover group-hover:scale-105 transition duration-300"
-            />
-          </button>
-          <!-- Item 8 -->
-          <button
-            type="button"
-            class="reveal reveal-up delay-sm group overflow-hidden rounded-md border bg-white"
-            data-full="./assets/gallery-8.jpg"
-          >
-            <img
-              src="./assets/gallery-8.jpg"
-              alt="Gallery 3"
-              class="w-full h-64 object-cover group-hover:scale-105 transition duration-300"
-            />
-          </button>
-          <!-- Item 9 -->
-          <button
-            type="button"
-            class="reveal reveal-up delay-md group overflow-hidden rounded-md border bg-white"
-            data-full="./assets/gallery-9.jpg"
-          >
-            <img
-              src="./assets/gallery-9.jpg"
-              alt="Gallery 3"
-              class="w-full h-64 object-cover group-hover:scale-105 transition duration-300"
+              alt="Town Hall Discussion"
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
             />
           </button>
         </div>
 
-        <!-- Lightbox Modal -->
+        <!-- Lightbox Modal  -->
         <div
           id="lightbox"
           class="fixed inset-0 z-[999] hidden"
           aria-hidden="true"
         >
           <div class="absolute inset-0 bg-black/80"></div>
-
           <button
             type="button"
             id="lightboxClose"
@@ -516,8 +543,6 @@
           >
             <i class="fa-solid fa-xmark"></i>
           </button>
-
-          <!-- prev/next -->
           <button
             type="button"
             id="lightboxPrev"
@@ -526,7 +551,6 @@
           >
             <i class="fa fa-chevron-left"></i>
           </button>
-
           <button
             type="button"
             id="lightboxNext"
@@ -535,8 +559,6 @@
           >
             <i class="fa fa-chevron-right"></i>
           </button>
-
-          <!-- content -->
           <div
             class="relative z-10 h-full flex items-center justify-center px-4"
           >
@@ -551,7 +573,6 @@
                 id="lightboxCaption"
                 class="text-white/90 text-sm md:text-base mt-4 text-center"
               ></p>
-
               <div
                 id="lightboxThumbs"
                 class="mt-6 flex gap-3 overflow-x-auto pb-2 justify-center"
@@ -563,7 +584,7 @@
     </section>
 
     <!-- BLOG SECTION -->
-    <section id="blog" class="bg-gray-100 py-12">
+    <section class="bg-[var(--primary)] py-12">
       <div class="px-4 md:px-6 max-w-7xl mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 items-start">
           <!-- LEFT -->
@@ -744,11 +765,8 @@
     </section>
 
     <!-- CONTACT SECTION -->
-    <section
-      id="contact"
-      class="reveal reveal-down delay-md py-12 bg-[var(--primary)]"
-    >
-      <div class="px-4 md:px-6 max-w-7xl mx-auto">
+    <section class="py-12 bg-[var(--primary)]">
+      <div class="px-4 md:px-6 max-w-7xl mx-auto reveal reveal-down delay-md">
         <div
           class="grid grid-cols-1 lg:grid-cols-12 rounded-md overflow-hidden shadow-md"
         >
