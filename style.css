@@ -10,7 +10,7 @@
 html,
 body {
   font-family: "Montserrat", sans-serif;
-  background-color: var(--primary);
+  background-color: var(--secondary);
   scroll-behavior: smooth;
 }
 
@@ -34,9 +34,7 @@ body {
   scrollbar-width: none;
 }
 
-/* 
-   HERO SECTION */
-
+/*  HERO SECTION */
 .hero-parallax-bg {
   position: relative;
   background-image: url("./assets/hero-main-bg.jpg");
@@ -81,9 +79,7 @@ body {
   }
 }
 
-/* 
-   TYPOGRAPHY*/
-
+/*  TYPOGRAPHY */
 .heading {
   font-family: "Space Grotesk", sans-serif;
   font-size: clamp(46px, 7vw, 86px);
@@ -132,9 +128,6 @@ p {
   display: inline-block;
   text-decoration: none;
   border-radius: 999px;
-  box-shadow:
-    0 12px 30px rgba(255, 21, 18, 0.25),
-    0 5px 12px rgba(0, 0, 0, 0.15);
   transition:
     transform 0.35s cubic-bezier(0.25, 1, 0.5, 1),
     background-color 0.3s ease,
@@ -142,11 +135,8 @@ p {
 }
 
 .btn:hover {
-  transform: translateY(-2px) scale(1.04);
+  transform: translateY(-1px) scale(1.02);
   background-color: #e61210;
-  box-shadow:
-    0 16px 36px rgba(255, 21, 18, 0.35),
-    0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* NAVIGATION */
@@ -156,9 +146,13 @@ p {
 }
 
 #navBrand {
-  font-family: "Playfair Display", serif;
-  font-weight: 800;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 900;
   letter-spacing: 0.03em;
+  font-size: 26px;
+  color: var(--primary);
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .nav-link {

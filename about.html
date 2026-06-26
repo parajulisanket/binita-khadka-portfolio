@@ -27,12 +27,8 @@
           class="mx-auto max-w-7xl px-4 md:px-6 py-5 flex items-center justify-between transition-all duration-300"
         >
           <!-- Logo -->
-          <a
-            href="index.html"
-            id="navBrand"
-            class="font-semibold text-2xl md:text-3xl tracking-wide text-white drop-shadow-lg transition-colors duration-300"
-          >
-            Binita Khadka
+          <a href="index.html" id="navBrand">
+            Binita <span class="font-thin tracking-wider"> Khadka </span>
           </a>
 
           <!-- Desktop Nav -->
@@ -83,8 +79,11 @@
           <div
             class="p-6 flex items-center justify-between border-b border-black/10"
           >
-            <a href="#top" class="title text-xl text-[var(--secondary)]">
-              Binita Khadka
+            <a
+              href="/index.html"
+              class="heading text-xl font-bold text-[var(--secondary)] uppercase"
+            >
+              Binita <span class="font-thin tracking-wider"> Khadka </span>
             </a>
 
             <button
@@ -226,7 +225,11 @@
       <div class="max-w-7xl mx-auto px-4 md:px-6">
         <div class="gap-12 items-start">
           <!-- Left Column: Image with Black Overlay & Socials -->
-          <div class="">
+          <div class="relative">
+            <!-- Red Corner Shape -->
+            <div
+              class="absolute -bottom-4 -right-4 h-64 w-44 bg-[var(--accent)] hidden sm:block pointer-events-none"
+            ></div>
             <!-- Image Container with Subtle Gradient Overlay -->
             <div class="relative overflow-hidden">
               <img
@@ -234,58 +237,58 @@
                 alt="Binita Khadka"
                 class="w-full h-[520px] object-cover"
               />
-              <div class="absolute inset-0 bg-black/30"></div>
+              <div class="absolute inset-0 bg-black/40"></div>
             </div>
+          </div>
 
-            <!-- Social Media Links -->
-            <div class="flex gap-4 mt-6 justify-start md:justify-center">
-              <a
-                href="https://www.facebook.com/binitakhadka77"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="h-11 w-11 text-slate-700 hover:text-white hover:bg-slate-900 border border-slate-300 rounded-full flex items-center justify-center transition-all duration-200"
-                aria-label="Facebook"
-              >
-                <i class="fa-brands fa-facebook-f"></i>
-              </a>
-              <a
-                href="https://www.instagram.com/binitakhadka77"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="h-11 w-11 text-slate-700 hover:text-white hover:bg-slate-900 border border-slate-300 rounded-full flex items-center justify-center transition-all duration-200"
-                aria-label="Instagram"
-              >
-                <i class="fa-brands fa-instagram"></i>
-              </a>
-              <a
-                href="https://www.twitter.com/binitakhadka77"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="h-11 w-11 text-slate-700 hover:text-white hover:bg-slate-900 border border-slate-300 rounded-full flex items-center justify-center transition-all duration-200"
-                aria-label="Twitter"
-              >
-                <i class="fa-brands fa-x-twitter"></i>
-              </a>
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="h-11 w-11 text-slate-700 hover:text-white hover:bg-slate-900 border border-slate-300 rounded-full flex items-center justify-center transition-all duration-200"
-                aria-label="Twitter"
-              >
-                <i class="fa-brands fa-threads"></i>
-              </a>
+          <!-- Social Media Links -->
+          <div class="flex gap-4 mt-6 justify-start md:justify-center">
+            <a
+              href="https://www.facebook.com/binitakhadka77"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="h-11 w-11 text-slate-700 hover:text-white hover:bg-slate-900 border border-slate-300 rounded-full flex items-center justify-center transition-all duration-200"
+              aria-label="Facebook"
+            >
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/binitakhadka77"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="h-11 w-11 text-slate-700 hover:text-white hover:bg-slate-900 border border-slate-300 rounded-full flex items-center justify-center transition-all duration-200"
+              aria-label="Instagram"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a
+              href="https://www.twitter.com/binitakhadka77"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="h-11 w-11 text-slate-700 hover:text-white hover:bg-slate-900 border border-slate-300 rounded-full flex items-center justify-center transition-all duration-200"
+              aria-label="Twitter"
+            >
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="h-11 w-11 text-slate-700 hover:text-white hover:bg-slate-900 border border-slate-300 rounded-full flex items-center justify-center transition-all duration-200"
+              aria-label="Twitter"
+            >
+              <i class="fa-brands fa-threads"></i>
+            </a>
 
-              <a
-                href="https://www.tiktok.com/@binitakhadka77"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="h-11 w-11 text-slate-700 hover:text-white hover:bg-slate-900 border border-slate-300 rounded-full flex items-center justify-center transition-all duration-200"
-                aria-label="TikTok"
-              >
-                <i class="fa-brands fa-tiktok text-sm"></i>
-              </a>
-            </div>
+            <a
+              href="https://www.tiktok.com/@binitakhadka77"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="h-11 w-11 text-slate-700 hover:text-white hover:bg-slate-900 border border-slate-300 rounded-full flex items-center justify-center transition-all duration-200"
+              aria-label="TikTok"
+            >
+              <i class="fa-brands fa-tiktok text-sm"></i>
+            </a>
           </div>
 
           <div class="space-y-6 pt-2">
@@ -532,11 +535,9 @@
     </section>
 
     <!-- CONTACT SECTION -->
-    <section id="contact" class="py-12 bg-[var(--primary)]">
+    <section class="py-12 bg-[var(--primary)]">
       <div class="px-4 md:px-6 max-w-7xl mx-auto reveal reveal-down delay-md">
-        <div
-          class="grid grid-cols-1 lg:grid-cols-12 rounded-md overflow-hidden shadow-md"
-        >
+        <div class="grid grid-cols-1 lg:grid-cols-12 overflow-hidden shadow-md">
           <!-- LEFT SIDE  -->
           <div
             class="lg:col-span-5 bg-[var(--accent)] text-white p-8 md:p-12 flex flex-col justify-between"
@@ -662,7 +663,9 @@
     <footer class="bg-[#111827] text-white">
       <div class="max-w-7xl mx-auto px-4 md:px-6 py-12">
         <div class="text-center space-y-6">
-          <h3 class="heading tracking-wider uppercase">Binita Khadka</h3>
+          <h3 class="heading tracking-wider uppercase">
+            Binita <span class="font-thin tracking-wider"> Khadka </span>
+          </h3>
 
           <p class="max-w-2xl mx-auto text-white/70 leading-relaxed">
             Binita Khadka is committed to people-first leadership built on
