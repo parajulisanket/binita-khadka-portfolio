@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image" href="./assets/favico.jpg" />
+    <title>Binita Khadka</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- header Section -->
+    <header class="flex items-center justify-center overflow-hidden relative">
+      <!-- NAV -->
+      <nav
+        id="heroNav"
+        class="fixed top-0 left-0 w-full z-50 transition-all duration-300"
+      >
+        <div
+          id="navInner"
+          class="mx-auto max-w-7xl px-4 md:px-6 py-5 flex items-center justify-between transition-all duration-300"
+        >
+          <!-- Logo -->
+          <a href="index.html" id="navBrand">
+            Binita <span class="font-thin tracking-wider"> Khadka </span>
+          </a>
+
+          <!-- Desktop Nav -->
+          <div
+            id="desktopNavLinks"
+            class="hidden lg:flex items-center gap-8 text-white font-medium"
+          >
+            <a href="about.html" class="nav-link">About</a>
+            <a href="press.html" class="nav-link">Press</a>
+            <a href="gallery.html" class="nav-link">Gallery</a>
+            <a href="blog.html" class="nav-link">Blog</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+          </div>
+
+          <div class="flex items-center gap-4">
+            <a
+              id="navCta"
+              href="contact.html"
+              class="hidden lg:inline-flex items-center justify-center rounded-full border border-white/60 px-5 py-2.5 text-sm font-semibold text-white hover:bg-white hover:text-black transition-all duration-300"
+            >
+              Join Movement
+            </a>
+
+            <!-- Hamburger: mobile + tablet only -->
+            <button
+              id="menuBtn"
+              class="lg:hidden group inline-flex items-center justify-center rounded-xl w-11 h-11 border border-white/40 bg-white/10 backdrop-blur text-white hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-white/50 transition-all duration-300"
+              aria-label="Open menu"
+              aria-expanded="false"
+            >
+              <span id="burger" class="burger">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </nav>
+      <div id="menuOverlay" class="fixed inset-0 bg-black/60 z-50 hidden"></div>
+      <!-- Off-canvas Menu -->
+      <aside
+        id="sideMenu"
+        class="fixed top-0 right-0 h-full w-full sm:w-[420px] bg-[#F8F9FA] z-[60] translate-x-full transition-transform duration-300 shadow-2xl flex flex-col justify-between"
+        aria-hidden="true"
+      >
+        <div>
+          <div
+            class="p-6 flex items-center justify-between border-b border-black/10"
+          >
+            <a
+              href="/index.html"
+              class="heading text-xl font-bold text-[var(--secondary)] uppercase"
+            >
+              Binita <span class="font-thin tracking-wider"> Khadka </span>
+            </a>
+
+            <button
+              id="closeBtn"
+              class="rounded-full w-10 h-10 flex items-center justify-center bg-black/5 hover:bg-black/10 focus:outline-none focus:ring-2 focus:ring-black/20 transition"
+              aria-label="Close menu"
+            >
+              <i class="fa-solid fa-x text-sm"></i>
+            </button>
+          </div>
+
+          <div class="p-6 space-y-8">
+            <ul class="space-y-3">
+              <li>
+                <a class="side-link" href="/press.html"> About </a>
+              </li>
+              <li>
+                <a class="side-link" href="/press.html"> Press </a>
+              </li>
+              <li>
+                <a class="side-link" href="/gallery.html"> Gallery </a>
+              </li>
+              <li>
+                <a class="side-link" href="/blog.html"> Blog </a>
+              </li>
+              <li>
+                <a class="side-link" href="/contact.html"> Contact </a>
+              </li>
+            </ul>
+
+            <div class="flex justify-center">
+              <a href="/contact.html" class="btn w-full text-center">
+                Join The Movement
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 bg-[var(--secondary)]">
+          <div class="flex justify-center flex-wrap gap-3">
+            <a
+              href="https://www.facebook.com/binita.khadka.718689"
+              target="_blank"
+              class="side-social"
+              aria-label="Facebook"
+            >
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a
+              href=""
+              target="_blank"
+              class="side-social"
+              aria-label="Instagram"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="" target="_blank" class="side-social" aria-label="Twitter">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+
+            <a href="" target="_blank" class="side-social" aria-label="Threads">
+              <i class="fa-brands fa-threads"></i>
+            </a>
+
+            <a
+              href="https://www.tiktok.com/@binitakhadka77"
+              target="_blank"
+              class="side-social"
+              aria-label="TikTok"
+            >
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+          </div>
+
+          <div class="pt-5">
+            <p class="text-white/60 text-sm text-center">
+              © <span id="year"></span> Binita Khadka. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </aside>
+    </header>
+
+    <!-- main -->
+    <section class="py-24 md:py-32 bg-[var(--primary)] text-white">
+      <div class="max-w-4xl mx-auto px-4 md:px-6 space-y-8">
+        <!--  Title -->
+        <div class="space-y-6">
+          <h1 class="title">
+            Community Listening Program Launch.<span
+              class="inline-block w-[100px] h-[6px] bg-[var(--accent)] ml-4 align-middle"
+            ></span>
+          </h1>
+
+          <!-- Date Under Title -->
+          <p
+            class="text-sm tracking-wider font-medium text-[var(--secondary)] uppercase"
+          >
+            Published on October 24, 2026
+          </p>
+        </div>
+
+        <!--  Info Text  -->
+        <div class="prose prose-invert max-w-none">
+          <p
+            class="text-[var(--text-gray)] text-base md:text-lg leading-relaxed first-letter:text-5xl first-letter:font-bold first-letter:text-[var(--accent)] first-letter:mr-2 first-letter:float-left"
+          >
+            A new initiative has been officially introduced to transform how
+            local governance interacts with residents. This comprehensive
+            program is designed specifically to collect direct citizen feedback,
+            ensuring that grassroots opinions directly shape local development
+            strategies.
+          </p>
+          <p
+            class="text-[var(--text-gray)] text-base md:text-lg leading-relaxed mt-4"
+          >
+            By implementing direct feedback loops, the framework prioritizes
+            immediate local needs across every single ward, establishing a new
+            benchmark for municipal accountability.
+          </p>
+        </div>
+
+        <!-- image-->
+        <div class="relative w-full h-[300px] md:h-[450px] overflow-hidden">
+          <img
+            src="./assets/gallery-6.jpg"
+            alt="Community Listening Program Launch Event"
+            class="w-full h-full object-cover"
+          />
+          <div class="absolute inset-0 bg-black/30"></div>
+        </div>
+
+        <!--  Info Text Again -->
+        <div
+          class="space-y-4 text-[var(--text-gray)] text-base md:text-lg leading-relaxed"
+        >
+          <p>
+            The program introduces a series of structured town halls and digital
+            submission portals. These platforms ensure complete transparency,
+            allowing community members to monitor exactly how their inputs
+            impact final budgetary choices and public project scheduling.
+          </p>
+          <p>
+            Through this deep-rooted accountability system, Binita Khadka
+            emphasizes a commitment to stronger community collaboration,
+            bringing public servants and everyday citizens together for
+            long-term regional progress.
+          </p>
+          <p>
+            The program introduces a series of structured town halls and digital
+            submission portals. These platforms ensure complete transparency,
+            allowing community members to monitor exactly how their inputs
+            impact final budgetary choices and public project scheduling.
+          </p>
+          <p>
+            The program introduces a series of structured town halls and digital
+            submission portals. These platforms ensure complete transparency,
+            allowing community members to monitor exactly how their inputs
+            impact final budgetary choices and public project scheduling.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#111827] text-white">
+      <div class="max-w-7xl mx-auto px-4 md:px-6 py-12">
+        <div class="text-center space-y-6">
+          <h3 class="heading tracking-wider uppercase">
+            Binita <span class="font-thin tracking-wider"> Khadka </span>
+          </h3>
+
+          <p class="max-w-2xl mx-auto text-white/70 leading-relaxed">
+            Binita Khadka is committed to people-first leadership built on
+            integrity, transparency, and practical solutions. This platform
+            shares updates, perspectives, and community work focused on
+            long-term progress for everyone.
+          </p>
+
+          <!-- Social Icons -->
+          <div class="flex items-center justify-center gap-4 pt-2">
+            <a
+              href="https://www.facebook.com/binita.khadka.718689"
+              target="_blank"
+              aria-label="Facebook"
+              class="h-11 w-11 rounded-full border border-white/20 flex items-center justify-center text-white/80 hover:text-white hover:border-white/60 transition"
+            >
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a
+              href="#"
+              aria-label="Instagram"
+              class="h-11 w-11 rounded-full border border-white/20 flex items-center justify-center text-white/80 hover:text-white hover:border-white/60 transition"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a
+              href=""
+              target="_blank"
+              aria-label="twitter"
+              class="h-11 w-11 rounded-full border border-white/20 flex items-center justify-center text-white/80 hover:text-white hover:border-white/60 transition"
+            >
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+
+            <a
+              href="#"
+              aria-label="Threads"
+              class="h-11 w-11 rounded-full border border-white/20 flex items-center justify-center text-white/80 hover:text-white hover:border-white/60 transition"
+            >
+              <i class="fa-brands fa-threads"></i>
+            </a>
+
+            <a
+              href="https://www.tiktok.com/@binitakhadka77"
+              target="_blank"
+              aria-label="TikTok"
+              class="h-11 w-11 rounded-full border border-white/20 flex items-center justify-center text-white/80 hover:text-white hover:border-white/60 transition"
+            >
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 py-4">
+          <div
+            class="flex flex-col sm:flex-row items-center justify-between gap-3"
+          >
+            <!-- Left -->
+            <p class="text-white/60 text-sm">
+              © <span id="year"></span> Binita Khadka. All rights reserved.
+            </p>
+
+            <!-- Right -->
+            <div class="flex items-center gap-2 text-white/60 text-sm">
+              <span>Developed by</span>
+
+              <!-- Company Logo -->
+              <img
+                src="./assets/kit.png"
+                alt="Company Logo"
+                class="h-6 w-auto opacity-80 hover:opacity-100 transition"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- scripts -->
+    <script src="./scripts/animation.js"></script>
+    <script src="./scripts/menu.js"></script>
+    <script src="./scripts/gallery.js"></script>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>
