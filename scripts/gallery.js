@@ -140,12 +140,15 @@ document.addEventListener("DOMContentLoaded", function () {
   // close when clicking the dark overlay
   if (lightbox) {
     lightbox.addEventListener("click", (e) => {
-      // if click is on overlay/background area (not on image area/buttons)
+      // Get the image element and thumbnail container to protect them from closing the modal
+      const isClickInsideContent =
+        imgEl?.contains(e.target) || thumbsEl?.contains(e.target);
+
+      // If the click is NOT on the image/thumbnails, and NOT on the arrow buttons, close it
       if (
-        e.target === lightbox ||
-        e.target.classList.contains("bg-black/80") ||
-        e.target.classList.contains("bg-black/95") ||
-        e.target.id === "lightbox"
+        !isClickInsideContent &&
+        !btnNext?.contains(e.target) &&
+        !btnPrev?.contains(e.target)
       ) {
         closeLightbox();
       }

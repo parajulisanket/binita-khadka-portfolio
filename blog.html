@@ -222,357 +222,517 @@
       </div>
     </section>
 
-    <!-- Blog Section Container  -->
-    <section class="py-12 bg-white">
+    <!-- Blog Section Container -->
+    <section class="py-12 bg-[var(--primary)]">
       <div class="max-w-7xl mx-auto px-4 md:px-6">
-        <!-- Section Header Title -->
-        <!-- <div class="mb-12">
-          <h2 class="title">Recent Updates</h2>
-          <div class="h-1 w-32 bg-[var(--accent)] mt-2"></div>
+        <!-- Section Header -->
+        <!-- <div class="mb-10">
+          <h2
+            class="title text-3xl md:text-4xl font-black text-[var(--secondary)]"
+          >
+            Recent Updates
+          </h2>
+          <div class="h-1 w-24 bg-[var(--accent)] mt-3"></div>
         </div> -->
 
-        <!-- Long Horizontal Layout Container -->
-        <div class="space-y-6">
-          <!-- Row 1 -->
+        <!-- Blog Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Card 1 -->
           <article
-            class="reveal reveal-up delay-sm bg-[var(--secondary)] relative flex flex-col lg:flex-row lg:items-center justify-between p-6"
+            class="reveal reveal-up group bg-white border border-black/10 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden"
           >
-            <div
-              class="flex flex-col md:flex-row md:items-center gap-6 flex-1 w-full"
-            >
-              <div
-                class="w-full md:w-[320px] md:h-[320px] overflow-hidden relative shrink-0 border border-white/10"
-              >
-                <img
-                  src="./assets/img-5.jpg"
-                  alt="Community Listening Program"
-                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-              </div>
-
-              <div class="space-y-2 flex-1 max-w-2xl">
-                <h3 class="title text-[var(--primary)] text-2xl md:text-4xl">
-                  Community Listening Program Launch
-                </h3>
-                <p class="text-white/60 text-sm md:text-base leading-relaxed">
-                  A new initiative to collect citizen feedback and prioritize
-                  local needs across every ward. The program ensures complete
-                  transparency. A new initiative to collect citizen feedback and
-                  prioritize local needs across every ward. The program ensures
-                  complete transparency.
-                </p>
-              </div>
-            </div>
-
-            <a
-              href="/single.html"
-              class="cursor-pointer mt-4 lg:mt-0 flex items-center gap-2 text-sm font-semibold text-white/80 shrink-0 hover:text-[var(--accent)]"
-            >
-              <span>Read Article</span>
-              <span class="inline-flex items-center mt-[1px]">
-                <i class="fa-solid fa-arrow-right text-xs"></i>
-              </span>
+            <!-- Image -->
+            <a href="/single.html" class="block overflow-hidden h-[260px]">
+              <img
+                src="./assets/img-5.jpg"
+                alt="Community Listening Program"
+                class="w-full h-full object-cover"
+              />
             </a>
-          </article>
-          <!-- Row 2 -->
-          <article
-            class="reveal reveal-up delay-sm bg-[var(--secondary)] relative flex flex-col lg:flex-row lg:items-center justify-between p-6"
-          >
-            <div
-              class="flex flex-col md:flex-row md:items-center gap-6 flex-1 w-full"
-            >
-              <div
-                class="w-full md:w-[320px] md:h-[320px] overflow-hidden relative shrink-0 border border-white/10"
+
+            <!-- Content -->
+            <div class="p-6 space-y-4">
+              <h3
+                class="title text-2xl font-black text-[var(--secondary)] leading-tight group-hover:text-[var(--accent)] transition-colors duration-300"
               >
-                <img
-                  src="./assets/img-5.jpg"
-                  alt="Community Listening Program"
-                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-              </div>
+                Community Listening Program Launch
+              </h3>
 
-              <div class="space-y-2 flex-1 max-w-2xl">
-                <h3 class="title text-[var(--primary)] text-2xl md:text-4xl">
-                  Community Listening Program Launch
-                </h3>
-                <p class="text-white/60 text-sm md:text-base leading-relaxed">
-                  A new initiative to collect citizen feedback and prioritize
-                  local needs across every ward. The program ensures complete
-                  transparency. A new initiative to collect citizen feedback and
-                  prioritize local needs across every ward. The program ensures
-                  complete transparency.
-                </p>
-              </div>
+              <p class="text-black/60 text-sm md:text-base leading-relaxed">
+                A new initiative to collect citizen feedback and prioritize
+                local needs across every ward with complete transparency.
+              </p>
+
+              <a
+                href="/single.html"
+                class="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-[var(--secondary)] hover:text-[var(--accent)] transition-colors duration-300"
+              >
+                <span>Read More</span>
+                <i
+                  class="fa-solid fa-arrow-right text-xs transition-transform duration-300 group-hover:translate-x-1"
+                ></i>
+              </a>
             </div>
+          </article>
 
-            <a
-              href="/single.html"
-              class="cursor-pointer mt-4 lg:mt-0 flex items-center gap-2 text-sm font-semibold text-white/80 shrink-0 hover:text-[var(--accent)]"
-            >
-              <span>Read Article</span>
-              <span class="inline-flex items-center mt-[1px]">
-                <i class="fa-solid fa-arrow-right text-xs"></i>
-              </span>
+          <!-- Card 2 -->
+          <article
+            class="reveal reveal-up delay-sm group bg-white border border-black/10 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden"
+          >
+            <!-- Image -->
+            <a href="/single.html" class="block overflow-hidden h-[260px]">
+              <img
+                src="./assets/img-5.jpg"
+                alt="Youth Engagement Program"
+                class="w-full h-full object-cover"
+              />
             </a>
-          </article>
-          <!-- Row 3 -->
-          <article
-            class="reveal reveal-up delay-sm bg-[var(--secondary)] relative flex flex-col lg:flex-row lg:items-center justify-between p-6"
-          >
-            <div
-              class="flex flex-col md:flex-row md:items-center gap-6 flex-1 w-full"
-            >
-              <div
-                class="w-full md:w-[320px] md:h-[320px] overflow-hidden relative shrink-0 border border-white/10"
+
+            <!-- Content -->
+            <div class="p-6 space-y-4">
+              <h3
+                class="title text-2xl font-black text-[var(--secondary)] leading-tight group-hover:text-[var(--accent)] transition-colors duration-300"
               >
-                <img
-                  src="./assets/img-5.jpg"
-                  alt="Community Listening Program"
-                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-              </div>
+                Congress Youth Engagement Program
+              </h3>
 
-              <div class="space-y-2 flex-1 max-w-2xl">
-                <h3 class="title text-[var(--primary)] text-2xl md:text-4xl">
-                  Community Listening Program Launch
-                </h3>
-                <p class="text-white/60 text-sm md:text-base leading-relaxed">
-                  A new initiative to collect citizen feedback and prioritize
-                  local needs across every ward. The program ensures complete
-                  transparency. A new initiative to collect citizen feedback and
-                  prioritize local needs across every ward. The program ensures
-                  complete transparency.
-                </p>
-              </div>
+              <p class="text-black/60 text-sm md:text-base leading-relaxed">
+                Empowering young people through leadership opportunities, open
+                dialogue, and practical community-based action.
+              </p>
+
+              <a
+                href="/single.html"
+                class="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-[var(--secondary)] hover:text-[var(--accent)] transition-colors duration-300"
+              >
+                <span>Read More</span>
+                <i
+                  class="fa-solid fa-arrow-right text-xs transition-transform duration-300 group-hover:translate-x-1"
+                ></i>
+              </a>
             </div>
+          </article>
 
-            <div
-              class="cursor-pointer mt-4 lg:mt-0 flex items-center gap-2 text-sm font-semibold text-white/80 shrink-0 hover:text-[var(--accent)]"
-            >
-              <span>Read Article</span>
-              <span class="inline-flex items-center mt-[1px]">
-                <i class="fa-solid fa-arrow-right text-xs"></i>
-              </span>
+          <!-- Card 3 -->
+          <article
+            class="reveal reveal-up delay-md group bg-white border border-black/10 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden"
+          >
+            <!-- Image -->
+            <a href="/single.html" class="block overflow-hidden h-[260px]">
+              <img
+                src="./assets/img-5.jpg"
+                alt="Community Development Update"
+                class="w-full h-full object-cover"
+              />
+            </a>
+
+            <!-- Content -->
+            <div class="p-6 space-y-4">
+              <h3
+                class="title text-2xl font-black text-[var(--secondary)] leading-tight group-hover:text-[var(--accent)] transition-colors duration-300"
+              >
+                Community Development Update
+              </h3>
+
+              <p class="text-black/60 text-sm md:text-base leading-relaxed">
+                Progress updates on local development goals, citizen priorities,
+                and transparent implementation plans.
+              </p>
+
+              <a
+                href="/single.html"
+                class="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-[var(--secondary)] hover:text-[var(--accent)] transition-colors duration-300"
+              >
+                <span>Read More</span>
+                <i
+                  class="fa-solid fa-arrow-right text-xs transition-transform duration-300 group-hover:translate-x-1"
+                ></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article
+            class="reveal reveal-up group bg-white border border-black/10 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden"
+          >
+            <!-- Image -->
+            <a href="/single.html" class="block overflow-hidden h-[260px]">
+              <img
+                src="./assets/img-5.jpg"
+                alt="Community Listening Program"
+                class="w-full h-full object-cover"
+              />
+            </a>
+
+            <!-- Content -->
+            <div class="p-6 space-y-4">
+              <h3
+                class="title text-2xl font-black text-[var(--secondary)] leading-tight group-hover:text-[var(--accent)] transition-colors duration-300"
+              >
+                Community Listening Program Launch
+              </h3>
+
+              <p class="text-black/60 text-sm md:text-base leading-relaxed">
+                A new initiative to collect citizen feedback and prioritize
+                local needs across every ward with complete transparency.
+              </p>
+
+              <a
+                href="/single.html"
+                class="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-[var(--secondary)] hover:text-[var(--accent)] transition-colors duration-300"
+              >
+                <span>Read More</span>
+                <i
+                  class="fa-solid fa-arrow-right text-xs transition-transform duration-300 group-hover:translate-x-1"
+                ></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 5 -->
+          <article
+            class="reveal reveal-up delay-sm group bg-white border border-black/10 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden"
+          >
+            <!-- Image -->
+            <a href="/single.html" class="block overflow-hidden h-[260px]">
+              <img
+                src="./assets/img-5.jpg"
+                alt="Youth Engagement Program"
+                class="w-full h-full object-cover"
+              />
+            </a>
+
+            <!-- Content -->
+            <div class="p-6 space-y-4">
+              <h3
+                class="title text-2xl font-black text-[var(--secondary)] leading-tight group-hover:text-[var(--accent)] transition-colors duration-300"
+              >
+                Congress Youth Engagement Program
+              </h3>
+
+              <p class="text-black/60 text-sm md:text-base leading-relaxed">
+                Empowering young people through leadership opportunities, open
+                dialogue, and practical community-based action.
+              </p>
+
+              <a
+                href="/single.html"
+                class="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-[var(--secondary)] hover:text-[var(--accent)] transition-colors duration-300"
+              >
+                <span>Read More</span>
+                <i
+                  class="fa-solid fa-arrow-right text-xs transition-transform duration-300 group-hover:translate-x-1"
+                ></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 6 -->
+          <article
+            class="reveal reveal-up delay-md group bg-white border border-black/10 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden"
+          >
+            <!-- Image -->
+            <a href="/single.html" class="block overflow-hidden h-[260px]">
+              <img
+                src="./assets/img-5.jpg"
+                alt="Community Development Update"
+                class="w-full h-full object-cover"
+              />
+            </a>
+
+            <!-- Content -->
+            <div class="p-6 space-y-4">
+              <h3
+                class="title text-2xl font-black text-[var(--secondary)] leading-tight group-hover:text-[var(--accent)] transition-colors duration-300"
+              >
+                Community Development Update
+              </h3>
+
+              <p class="text-black/60 text-sm md:text-base leading-relaxed">
+                Progress updates on local development goals, citizen priorities,
+                and transparent implementation plans.
+              </p>
+
+              <a
+                href="/single.html"
+                class="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-[var(--secondary)] hover:text-[var(--accent)] transition-colors duration-300"
+              >
+                <span>Read More</span>
+                <i
+                  class="fa-solid fa-arrow-right text-xs transition-transform duration-300 group-hover:translate-x-1"
+                ></i>
+              </a>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- CONTACT SECTION -->
-    <section class="py-12 bg-[var(--primary)]">
-      <div class="px-4 md:px-6 max-w-7xl mx-auto reveal reveal-down delay-md">
-        <div class="grid grid-cols-1 lg:grid-cols-12 overflow-hidden shadow-md">
-          <!-- LEFT SIDE  -->
-          <div
-            class="lg:col-span-5 bg-[var(--accent)] text-white p-8 md:p-12 flex flex-col justify-between"
-          >
-            <!-- Title -->
-            <div class="space-y-3">
-              <h2 class="title text-white text-2xl md:text-3xl">
-                Be Part of the Change
-              </h2>
-              <p class="font-[Montserrat] text-white/90 leading-relaxed">
-                For public events, partnerships, or community discussions, feel
-                free to reach out directly.
-              </p>
-            </div>
+    <!-- CONTACT + FOOTER WRAPPER -->
+    <section class="relative bg-[var(--primary)] pt-16">
+      <!-- CONTACT SECTION OVERLAY -->
+      <div
+        class="relative z-20 px-4 md:px-6 max-w-7xl mx-auto reveal reveal-down delay-sm"
+      >
+        <div class="bg-white shadow-2xl overflow-hidden p-6 md:p-10 lg:p-12">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+            <!-- LEFT SIDE -->
+            <div
+              class="lg:col-span-5 bg-[var(--accent)] text-white rounded-2xl p-8 md:p-10 flex flex-col justify-between"
+            >
+              <!-- message -->
+              <div>
+                <h2 class="title text-2xl font-black text-white leading-tight">
+                  Be Part of the Change. Send a Message.
+                </h2>
 
-            <!-- Contact Info -->
-            <div class="space-y-6 mt-8">
-              <!-- Email -->
-              <div class="flex items-center gap-4">
-                <div
-                  class="h-12 w-12 rounded-md bg-white/30 flex items-center justify-center"
-                >
-                  <i class="fa-solid fa-envelope text-white"></i>
+                <p class="mt-4 text-white/85 leading-6 text-base">
+                  For public events, partnerships, community discussions, or
+                  general inquiries, feel free to reach out directly.
+                </p>
+
+                <!-- Contact Info -->
+                <div class="space-y-4 mt-8">
+                  <!-- Email -->
+                  <div class="flex items-center gap-4">
+                    <div
+                      class="h-10 w-10 rounded-md bg-white/20 flex items-center justify-center text-white"
+                    >
+                      <i class="fa-solid fa-envelope text-lg"></i>
+                    </div>
+
+                    <div>
+                      <p class="text-sm text-white/75">Phone</p>
+                      <a
+                        href="mailto:info@binitakhadka.com"
+                        class="font-medium text-white hover:text-white/80 transition"
+                      >
+                        info@binitakhadka.com
+                      </a>
+                    </div>
+                  </div>
+                  <!-- Phone -->
+                  <div class="flex items-center gap-4">
+                    <div
+                      class="h-10 w-10 rounded-md bg-white/20 flex items-center justify-center text-white"
+                    >
+                      <i class="fa-solid fa-phone text-lg"></i>
+                    </div>
+
+                    <div>
+                      <p class="text-sm text-white/75">Address</p>
+                      <p
+                        class="font-medium text-white hover:text-white/80 transition"
+                      >
+                        Kathmadnu, Nepal
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Address -->
+                  <div class="flex items-center gap-4">
+                    <div
+                      class="h-10 w-10 rounded-md bg-white/20 flex items-center justify-center text-white"
+                    >
+                      <i class="fa-solid fa-envelope text-lg"></i>
+                    </div>
+
+                    <div>
+                      <p class="text-sm text-white/75">Email</p>
+                      <a
+                        href="mailto:info@binitakhadka.com"
+                        class="font-medium text-white hover:text-white/80 transition"
+                      >
+                        info@binitakhadka.com
+                      </a>
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  <p class="text-sm text-white/90">Email</p>
-                  <a href="mailto:info@binitakhadka.com" class="font-semibold">
-                    info@binitakhadka.com
+              </div>
+
+              <!-- Social Box -->
+              <div class="mt-8 bg-white/15 rounded-md p-4">
+                <p class="text-base text-white font-medium mb-5">
+                  Follow me on social media
+                </p>
+
+                <div class="flex items-center gap-4 flex-wrap">
+                  <span class="h-[3px] w-12 bg-white"></span>
+
+                  <a
+                    href="https://www.facebook.com/binita.khadka.718689"
+                    target="_blank"
+                    aria-label="Facebook"
+                    class="h-10 w-10 rounded-full bg-white text-[var(--accent)] shadow-sm flex items-center justify-center hover:-translate-y-1 transition"
+                  >
+                    <i class="fa-brands fa-facebook-f text-lg"></i>
+                  </a>
+
+                  <a
+                    href="#"
+                    aria-label="Instagram"
+                    class="h-10 w-10 rounded-full bg-white text-[var(--accent)] shadow-sm flex items-center justify-center hover:-translate-y-1 transition"
+                  >
+                    <i class="fa-brands fa-instagram text-lg"></i>
+                  </a>
+
+                  <a
+                    href="#"
+                    target="_blank"
+                    aria-label="X Twitter"
+                    class="h-10 w-10 rounded-full bg-white text-[var(--accent)] shadow-sm flex items-center justify-center hover:-translate-y-1 transition"
+                  >
+                    <i class="fa-brands fa-x-twitter text-lg"></i>
+                  </a>
+
+                  <a
+                    href="#"
+                    aria-label="Threads"
+                    class="h-10 w-10 rounded-full bg-white text-[var(--accent)] shadow-sm flex items-center justify-center hover:-translate-y-1 transition"
+                  >
+                    <i class="fa-brands fa-threads text-lg"></i>
+                  </a>
+
+                  <a
+                    href="https://www.tiktok.com/@binitakhadka77"
+                    target="_blank"
+                    aria-label="TikTok"
+                    class="h-10 w-10 rounded-full bg-white text-[var(--accent)] shadow-sm flex items-center justify-center hover:-translate-y-1 transition"
+                  >
+                    <i class="fa-brands fa-tiktok text-lg"></i>
                   </a>
                 </div>
               </div>
-
-              <!-- Phone -->
-              <div class="flex items-center gap-4">
-                <div
-                  class="h-12 w-12 rounded-md bg-white/30 flex items-center justify-center"
-                >
-                  <i class="fa-solid fa-phone text-white"></i>
-                </div>
-                <div>
-                  <p class="text-sm text-white/90">Phone</p>
-                  <a href="tel:+9779800000000" class="font-semibold">
-                    +977 98XXXXXXXX
-                  </a>
-                </div>
-              </div>
-
-              <!-- Address -->
-              <div class="flex items-center gap-4">
-                <div
-                  class="h-12 w-12 rounded-md bg-white/30 flex items-center justify-center"
-                >
-                  <i class="fa-solid fa-location-dot text-white"></i>
-                </div>
-                <div>
-                  <p class="text-sm text-white/90">Address</p>
-                  <p class="font-semibold">Kathmandu, Nepal</p>
-                </div>
-              </div>
             </div>
-          </div>
 
-          <!-- RIGHT SIDE  -->
-          <div class="lg:col-span-7 bg-white p-8 md:p-12">
-            <form class="space-y-6">
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div class="space-y-2">
-                  <label class="text-sm font-semibold text-black">
-                    Full Name
-                  </label>
+            <!-- RIGHT SIDE -->
+            <div class="lg:col-span-7">
+              <h3
+                class="title text-2xl md:text-3xl font-semibold text-[var(--secondary)] mb-6"
+              >
+                Just say
+                <span
+                  class="text-[var(--accent)] font-extrabold text-3xl md:text-4xl"
+                >
+                  Hi,</span
+                >
+              </h3>
+
+              <form class="space-y-5">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                   <input
                     type="text"
-                    placeholder="Your name"
-                    class="w-full rounded-md border border-black/10 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/40 focus:border-[var(--accent)]"
+                    placeholder="Full Name"
+                    class="w-full rounded-lg border border-black/15 px-5 py-4 text-[var(--secondary)] placeholder:text-black/40 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/30 focus:border-[var(--accent)]"
                   />
-                </div>
 
-                <div class="space-y-2">
-                  <label class="text-sm font-semibold text-black">
-                    Email
-                  </label>
                   <input
                     type="email"
-                    placeholder="you@example.com"
-                    class="w-full rounded-md border border-black/10 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/40 focus:border-[var(--accent)]"
+                    placeholder="Email Address"
+                    class="w-full rounded-lg border border-black/15 px-5 py-4 text-[var(--secondary)] placeholder:text-black/40 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/30 focus:border-[var(--accent)]"
                   />
                 </div>
-              </div>
 
-              <div class="space-y-2">
-                <label class="text-sm font-semibold text-black">
-                  Subject
-                </label>
                 <input
                   type="text"
-                  placeholder="What’s this about?"
-                  class="w-full rounded-md border border-black/10 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/40 focus:border-[var(--accent)]"
+                  placeholder="Subject"
+                  class="w-full rounded-lg border border-black/15 px-5 py-4 text-[var(--secondary)] placeholder:text-black/40 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/30 focus:border-[var(--accent)]"
                 />
-              </div>
 
-              <div class="space-y-2">
-                <label class="text-sm font-semibold text-black">
-                  Message
-                </label>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                  <input
+                    type="text"
+                    placeholder="Phone Number"
+                    class="w-full rounded-lg border border-black/15 px-5 py-4 text-[var(--secondary)] placeholder:text-black/40 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/30 focus:border-[var(--accent)]"
+                  />
+
+                  <input
+                    type="text"
+                    placeholder="Address / Location"
+                    class="w-full rounded-lg border border-black/15 px-5 py-4 text-[var(--secondary)] placeholder:text-black/40 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/30 focus:border-[var(--accent)]"
+                  />
+                </div>
+
                 <textarea
-                  rows="6"
-                  placeholder="Write your message..."
-                  class="w-full rounded-md border border-black/10 px-4 py-3 resize-none focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/40 focus:border-[var(--accent)]"
+                  rows="7"
+                  placeholder="Message"
+                  class="w-full rounded-lg border border-black/15 px-5 py-4 text-[var(--secondary)] placeholder:text-black/40 resize-none focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/30 focus:border-[var(--accent)]"
                 ></textarea>
-              </div>
 
-              <button type="submit" class="btn">
-                Send Message
-                <i class="fa-solid fa-paper-plane text-sm"></i>
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="bg-[#111827] text-white">
-      <div class="max-w-7xl mx-auto px-4 md:px-6 py-12">
-        <div class="text-center space-y-6">
-          <h3 class="heading tracking-wider uppercase">
-            Binita <span class="font-thin tracking-wider"> Khadka </span>
-          </h3>
-
-          <p class="max-w-2xl mx-auto text-white/70 leading-relaxed">
-            Binita Khadka is committed to people-first leadership built on
-            integrity, transparency, and practical solutions. This platform
-            shares updates, perspectives, and community work focused on
-            long-term progress for everyone.
-          </p>
-
-          <!-- Social Icons -->
-          <div class="flex items-center justify-center gap-4 pt-2">
-            <a
-              href="https://www.facebook.com/binita.khadka.718689"
-              target="_blank"
-              aria-label="Facebook"
-              class="h-11 w-11 rounded-full border border-white/20 flex items-center justify-center text-white/80 hover:text-white hover:border-white/60 transition"
-            >
-              <i class="fa-brands fa-facebook-f"></i>
-            </a>
-
-            <a
-              href="#"
-              aria-label="Instagram"
-              class="h-11 w-11 rounded-full border border-white/20 flex items-center justify-center text-white/80 hover:text-white hover:border-white/60 transition"
-            >
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-
-            <a
-              href=""
-              target="_blank"
-              aria-label="twitter"
-              class="h-11 w-11 rounded-full border border-white/20 flex items-center justify-center text-white/80 hover:text-white hover:border-white/60 transition"
-            >
-              <i class="fa-brands fa-x-twitter"></i>
-            </a>
-
-            <a
-              href="#"
-              aria-label="Threads"
-              class="h-11 w-11 rounded-full border border-white/20 flex items-center justify-center text-white/80 hover:text-white hover:border-white/60 transition"
-            >
-              <i class="fa-brands fa-threads"></i>
-            </a>
-
-            <a
-              href="https://www.tiktok.com/@binitakhadka77"
-              target="_blank"
-              aria-label="TikTok"
-              class="h-11 w-11 rounded-full border border-white/20 flex items-center justify-center text-white/80 hover:text-white hover:border-white/60 transition"
-            >
-              <i class="fa-brands fa-tiktok"></i>
-            </a>
+                <button type="submit" class="btn space-x-2">
+                  <span>Send Message</span>
+                  <i class="fa-solid fa-paper-plane"></i>
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Bottom bar -->
-      <div class="border-t border-white/10">
-        <div class="max-w-7xl mx-auto px-4 md:px-6 py-4">
+      <!-- FOOTER -->
+      <footer
+        class="relative z-10 bg-[var(--secondary)] text-white -mt-24 pt-36"
+      >
+        <div class="max-w-7xl mx-auto px-4 md:px-6 py-10">
           <div
-            class="flex flex-col sm:flex-row items-center justify-between gap-3"
+            class="flex flex-col lg:flex-row items-center justify-between gap-8 text-center lg:text-left"
           >
-            <!-- Left -->
-            <p class="text-white/60 text-sm">
-              © <span id="year"></span> Binita Khadka. All rights reserved.
-            </p>
+            <!-- Brand -->
+            <a
+              href="/"
+              class="heading text-xl md:text-2xl font-black uppercase tracking-wider"
+            >
+              Binita <span class="font-thin tracking-widest"> Khadka</span>
+            </a>
 
-            <!-- Right -->
-            <div class="flex items-center gap-2 text-white/60 text-sm">
+            <!-- Footer Nav -->
+            <nav>
+              <ul
+                class="flex flex-wrap items-center justify-center gap-6 md:gap-10 text-white/60 font-medium"
+              >
+                <li>
+                  <a href="/about.html" class="hover:text-white transition">
+                    About
+                  </a>
+                </li>
+                <li>
+                  <a href="/press.html" class="hover:text-white transition">
+                    Press
+                  </a>
+                </li>
+                <li>
+                  <a href="/gallery.html" class="hover:text-white transition">
+                    Gallery
+                  </a>
+                </li>
+                <li>
+                  <a href="/blog.html" class="hover:text-white transition">
+                    Blog
+                  </a>
+                </li>
+                <li>
+                  <a href="/contact.html" class="hover:text-white transition">
+                    Contact
+                  </a>
+                </li>
+              </ul>
+            </nav>
+
+            <!-- Developed By -->
+            <div
+              class="flex items-center justify-center lg:justify-end gap-2 text-white/70 text-sm"
+            >
               <span>Developed by</span>
-
-              <!-- Company Logo -->
               <img
                 src="./assets/kit.png"
-                alt="Company Logo"
-                class="h-6 w-auto opacity-80 hover:opacity-100 transition"
+                alt="Kantipur Infotech"
+                class="h-8 w-auto object-contain"
               />
             </div>
           </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </section>
 
     <!-- scripts -->
     <script src="./scripts/animation.js"></script>

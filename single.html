@@ -251,90 +251,62 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-[#111827] text-white">
-      <div class="max-w-7xl mx-auto px-4 md:px-6 py-12">
-        <div class="text-center space-y-6">
-          <h3 class="heading tracking-wider uppercase">
-            Binita <span class="font-thin tracking-wider"> Khadka </span>
-          </h3>
-
-          <p class="max-w-2xl mx-auto text-white/70 leading-relaxed">
-            Binita Khadka is committed to people-first leadership built on
-            integrity, transparency, and practical solutions. This platform
-            shares updates, perspectives, and community work focused on
-            long-term progress for everyone.
-          </p>
-
-          <!-- Social Icons -->
-          <div class="flex items-center justify-center gap-4 pt-2">
-            <a
-              href="https://www.facebook.com/binita.khadka.718689"
-              target="_blank"
-              aria-label="Facebook"
-              class="h-11 w-11 rounded-full border border-white/20 flex items-center justify-center text-white/80 hover:text-white hover:border-white/60 transition"
-            >
-              <i class="fa-brands fa-facebook-f"></i>
-            </a>
-
-            <a
-              href="#"
-              aria-label="Instagram"
-              class="h-11 w-11 rounded-full border border-white/20 flex items-center justify-center text-white/80 hover:text-white hover:border-white/60 transition"
-            >
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-
-            <a
-              href=""
-              target="_blank"
-              aria-label="twitter"
-              class="h-11 w-11 rounded-full border border-white/20 flex items-center justify-center text-white/80 hover:text-white hover:border-white/60 transition"
-            >
-              <i class="fa-brands fa-x-twitter"></i>
-            </a>
-
-            <a
-              href="#"
-              aria-label="Threads"
-              class="h-11 w-11 rounded-full border border-white/20 flex items-center justify-center text-white/80 hover:text-white hover:border-white/60 transition"
-            >
-              <i class="fa-brands fa-threads"></i>
-            </a>
-
-            <a
-              href="https://www.tiktok.com/@binitakhadka77"
-              target="_blank"
-              aria-label="TikTok"
-              class="h-11 w-11 rounded-full border border-white/20 flex items-center justify-center text-white/80 hover:text-white hover:border-white/60 transition"
-            >
-              <i class="fa-brands fa-tiktok"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Bottom bar -->
-      <div class="border-t border-white/10">
-        <div class="max-w-7xl mx-auto px-4 md:px-6 py-4">
-          <div
-            class="flex flex-col sm:flex-row items-center justify-between gap-3"
+    <footer class="relative z-10 bg-[var(--secondary)] text-white">
+      <div class="max-w-7xl mx-auto px-4 md:px-6 py-10">
+        <div
+          class="flex flex-col lg:flex-row items-center justify-between gap-8 text-center lg:text-left"
+        >
+          <!-- Brand -->
+          <a
+            href="/"
+            class="heading text-xl md:text-2xl font-black uppercase tracking-wider"
           >
-            <!-- Left -->
-            <p class="text-white/60 text-sm">
-              © <span id="year"></span> Binita Khadka. All rights reserved.
-            </p>
+            Binita <span class="font-thin tracking-widest"> Khadka</span>
+          </a>
 
-            <!-- Right -->
-            <div class="flex items-center gap-2 text-white/60 text-sm">
-              <span>Developed by</span>
+          <!-- Footer Nav -->
+          <nav>
+            <ul
+              class="flex flex-wrap items-center justify-center gap-6 md:gap-10 text-white/60 font-medium"
+            >
+              <li>
+                <a href="/about.html" class="hover:text-white transition">
+                  About
+                </a>
+              </li>
+              <li>
+                <a href="/press.html" class="hover:text-white transition">
+                  Press
+                </a>
+              </li>
+              <li>
+                <a href="/gallery.html" class="hover:text-white transition">
+                  Gallery
+                </a>
+              </li>
+              <li>
+                <a href="/blog.html" class="hover:text-white transition">
+                  Blog
+                </a>
+              </li>
+              <li>
+                <a href="/contact.html" class="hover:text-white transition">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </nav>
 
-              <!-- Company Logo -->
-              <img
-                src="./assets/kit.png"
-                alt="Company Logo"
-                class="h-6 w-auto opacity-80 hover:opacity-100 transition"
-              />
-            </div>
+          <!-- Developed By -->
+          <div
+            class="flex items-center justify-center lg:justify-end gap-2 text-white/70 text-sm"
+          >
+            <span>Developed by</span>
+            <img
+              src="./assets/kit.png"
+              alt="Kantipur Infotech"
+              class="h-8 w-auto object-contain"
+            />
           </div>
         </div>
       </div>
